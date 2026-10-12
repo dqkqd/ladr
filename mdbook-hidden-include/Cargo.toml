@@ -1,0 +1,9 @@
+[package]
+name = "mdbook-hidden-include"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+mdbook-preprocessor = "0.5.4"
+serde_json = "1.0.154"

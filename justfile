@@ -1,2 +1,2 @@
-build:
-  typst compile docs/main.typ main.pdf
+watch:
+  mdbook serve --open

@@ -1,0 +1,11 @@
+[book]
+title = "LADR"
+authors = ["Khanh Duong"]
+language = "en"
+src = "docs"
+
+[output.html]
+mathjax-support = true
+
+[preprocessor.remove-emphasis]
+command = "cargo run --manifest-path=mdbook-hidden-include/Cargo.toml --locked"
