@@ -13,7 +13,7 @@ Which can be defined as:
 ```rust
 {{#include ../../src/complex.rs:def}}
 
-let c = Complex::new(3.0, 4.0);
+let c = Complex::new(3, 4);
 # assert_eq!(c.to_string(), "3 + 4i");
 println!("{}", c);
 ```
@@ -33,8 +33,8 @@ The addition and multiplication is also defined:
 {{#hidden_include ../../src/complex.rs:def}}
 {{#hidden_include ../../src/complex.rs:inv}}
 {{#hidden_include ../../src/complex.rs:op}}
-let lhs = Complex::new(2.0, 3.0);
-let rhs = Complex::new(4.0, 5.0);
+let lhs = Complex::new(2, 3);
+let rhs = Complex::new(4, 5);
 # assert_eq!((lhs + rhs).to_string(), "6 + 8i");
 # assert_eq!((lhs * rhs).to_string(), "-7 + 22i");
 println!("({}) + ({}) = {}", lhs, rhs, lhs + rhs);
@@ -70,7 +70,7 @@ Suppose \\( 0 = x + yi \\), then
 {{#include ../../src/complex.rs:zero}}
 
 let zero = Complex::zero();
-let c = Complex::new(1.0, 2.0);
+let c = Complex::new(1, 2);
 # assert_eq!((zero).to_string(), "0 + 0i");
 # assert_eq!((c + zero).to_string(), c.to_string());
 println!("zero = {}", zero);
@@ -126,7 +126,7 @@ Thus \\( 1 = 1 + 0i \\).
 {{#include ../../src/complex.rs:one}}
 
 let one = Complex::one();
-let c = Complex::new(1.0, 2.0);
+let c = Complex::new(1, 2);
 # assert_eq!((one).to_string(), "1 + 0i");
 # assert_eq!((c * one).to_string(), c.to_string());
 println!("one = {}", one);
@@ -155,7 +155,7 @@ b &= 0 - a\\\\
 {{#hidden_include ../../src/complex.rs:def}}
 {{#hidden_include ../../src/complex.rs:inv}}
 {{#hidden_include ../../src/complex.rs:op}}
-let c = Complex::new(1.0, 2.0);
+let c = Complex::new(1, 2);
 # assert_eq!((-c).to_string(), "-1 + -2i");
 println!("-c = {}", -c);
 println!("({}) * ({}) = {}", c, -c, c + (-c));
@@ -187,7 +187,7 @@ b &= \frac{1}{x + yi}\\\\
 {{#hidden_include ../../src/complex.rs:op}}
 {{#include ../../src/complex.rs:inv}}
 
-let c = Complex::new(1.0, 2.0);
+let c = Complex::new(1, 2);
 # assert_eq!(c * c.inv(), Complex::one());
 println!("c inverse = {}", c.inv());
 println!("({}) * ({}) = {}", c, c.inv(), c * c.inv());
@@ -210,8 +210,8 @@ Having the negation and inversion, subtraction and division can be easily define
 {{#hidden_include ../../src/complex.rs:op}}
 {{#hidden_include ../../src/complex.rs:inv}}
 
-let lhs = Complex::new(2.0, 8.0);
-let rhs = Complex::new(1.0, 2.0);
+let lhs = Complex::new(2, 8);
+let rhs = Complex::new(1, 2);
 # assert_eq!((lhs - rhs).to_string(), "1 + 6i");
 # assert_eq!((lhs / rhs).to_string(), "3.6 + 0.8i");
 println!("({}) - ({}) = {}", lhs, rhs, lhs - rhs);

@@ -59,12 +59,7 @@ mod test {
         assert_eq!(List::new([1, 2]).to_string(), "(1,2)");
         assert_eq!(List::new([1, 2, 3]).to_string(), "(1,2,3)");
         assert_eq!(
-            List::new([
-                Complex::new(1.0, 2.0),
-                Complex::new(3.0, 4.0),
-                Complex::new(5.0, 6.0)
-            ])
-            .to_string(),
+            List::new([Complex::new(1, 2), Complex::new(3, 4), Complex::new(5, 6)]).to_string(),
             "(1 + 2i,3 + 4i,5 + 6i)"
         );
     }

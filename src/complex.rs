@@ -8,8 +8,11 @@ pub struct Complex {
 }
 
 impl Complex {
-    pub fn new(a: f64, b: f64) -> Complex {
-        Complex { a, b }
+    pub fn new(a: impl Into<f64>, b: impl Into<f64>) -> Complex {
+        Complex {
+            a: a.into(),
+            b: b.into(),
+        }
     }
 }
 
@@ -23,7 +26,7 @@ impl std::fmt::Display for Complex {
 // ANCHOR: zero
 impl Complex {
     pub fn zero() -> Complex {
-        Complex::new(0.0, 0.0)
+        Complex { a: 0.0, b: 0.0 }
     }
 }
 // ANCHOR_END: zero
@@ -31,7 +34,7 @@ impl Complex {
 // ANCHOR: one
 impl Complex {
     pub fn one() -> Complex {
-        Complex::new(1.0, 0.0)
+        Complex { a: 1.0, b: 0.0 }
     }
 }
 // ANCHOR_END: one
@@ -40,7 +43,10 @@ impl Complex {
 impl Complex {
     pub fn inv(&self) -> Complex {
         let denom = self.a * self.a + self.b * self.b;
-        Complex::new(self.a / denom, -self.b / denom)
+        Complex {
+            a: self.a / denom,
+            b: -self.b / denom,
+        }
     }
 }
 // ANCHOR_END: inv
@@ -66,22 +72,28 @@ use std::ops::{Add, Div, Mul, Neg, Sub};
 impl Add for Complex {
     type Output = Complex;
     fn add(self, rhs: Self) -> Self::Output {
-        Complex::new(self.a + rhs.a, self.b + rhs.b)
+        Complex {
+            a: self.a + rhs.a,
+            b: self.b + rhs.b,
+        }
     }
 }
 impl Mul for Complex {
     type Output = Complex;
     fn mul(self, rhs: Self) -> Self::Output {
-        Complex::new(
-            self.a * rhs.a - self.b * rhs.b,
-            self.a * rhs.b + self.b * rhs.a,
-        )
+        Complex {
+            a: self.a * rhs.a - self.b * rhs.b,
+            b: self.a * rhs.b + self.b * rhs.a,
+        }
     }
 }
 impl Neg for Complex {
     type Output = Complex;
     fn neg(self) -> Self::Output {
-        Complex::new(-self.a, -self.b)
+        Complex {
+            a: -self.a,
+            b: -self.b,
+        }
     }
 }
 impl Sub for Complex {
@@ -106,39 +118,39 @@ mod test {
 
     #[test]
     fn display() {
-        let c = Complex::new(3.0, 4.0);
+        let c = Complex::new(3, 4);
         assert_eq!(c.to_string(), "3 + 4i");
     }
 
     #[test]
     fn add() {
-        let lhs = Complex::new(2.0, 3.0);
-        let rhs = Complex::new(4.0, 5.0);
+        let lhs = Complex::new(2, 3);
+        let rhs = Complex::new(4, 5);
         assert_eq!((lhs + rhs).to_string(), "6 + 8i");
     }
 
     #[test]
     fn mul() {
-        let lhs = Complex::new(2.0, 3.0);
-        let rhs = Complex::new(4.0, 5.0);
+        let lhs = Complex::new(2, 3);
+        let rhs = Complex::new(4, 5);
         assert_eq!((lhs * rhs).to_string(), "-7 + 22i");
     }
 
     #[test]
     fn zero() {
-        let c = Complex::new(2.0, 3.0);
+        let c = Complex::new(2, 3);
         assert_eq!(c + Complex::zero(), c);
     }
 
     #[test]
     fn one() {
-        let c = Complex::new(2.0, 3.0);
+        let c = Complex::new(2, 3);
         assert_eq!(c * Complex::one(), c);
     }
 
     #[test]
     fn neg() {
-        let c = Complex::new(2.0, 3.0);
+        let c = Complex::new(2, 3);
         let neg_c = -c;
         assert_eq!(neg_c.to_string(), "-2 + -3i");
         assert_eq!(c + neg_c, Complex::zero());
@@ -146,29 +158,29 @@ mod test {
 
     #[test]
     fn inv() {
-        let c = Complex::new(1.0, 2.0);
+        let c = Complex::new(1, 2);
         assert_eq!(c.inv().to_string(), "0.2 + -0.4i");
         assert_eq!(c * c.inv(), Complex::one());
     }
 
     #[test]
     fn sub() {
-        let lhs = Complex::new(3.0, 6.0);
-        let rhs = Complex::new(1.0, 2.0);
+        let lhs = Complex::new(3, 6);
+        let rhs = Complex::new(1, 2);
         assert_eq!((lhs - rhs).to_string(), "2 + 4i");
     }
 
     #[test]
     fn div() {
-        let lhs = Complex::new(2.0, 8.0);
-        let rhs = Complex::new(1.0, 2.0);
+        let lhs = Complex::new(2, 8);
+        let rhs = Complex::new(1, 2);
         assert_eq!(Complex::one() / rhs, rhs.inv());
         assert_eq!((lhs / rhs) * rhs, lhs);
     }
 
     #[test]
     fn pow() {
-        let c = Complex::new(1.0, 2.0);
+        let c = Complex::new(1, 2);
         assert_eq!(c.pow(0), Complex::one());
         assert_eq!(c.pow(1), c);
         assert_eq!(c.pow(2), c * c);
