@@ -273,3 +273,153 @@ let c1 = Complex::new(-6, 7);
 let c2 = Complex::new(-32, -9);
 println!("({}) / ({}) = {}", c2, c1, c2/c1);
 ```
+
+## Exercise 11
+
+Show that
+
+\\[
+(x + y) + z = x + (y + z), \quad \forall x,y,z \in \mathbb{F}^n
+\\]
+
+**Solution**:
+
+\\[
+\begin{aligned}
+(x + y) + z
+&= ((x_1,...,x_n) + (y_1,...,y_n)) + (z_1,...,z_n) \\\\
+&= (x_1 + y_1,...,x_n+y_n) + (z_1,...,z_n) \\\\
+&= ((x_1 + y_1) + z_1,...,(x_n+y_n)+z_n) \\\\
+&= (x_1 + (y_1 + z_1),...,x_n+(y_n+z_n))
+\end{aligned}
+\\]
+
+Because \\( (a + b) + c = a + (b + c), \quad \forall a,b,c \in \mathbb{F} \\):
+\\[
+\begin{aligned}
+&(x_1 + (y_1 + z_1),...,x_n+(y_n+z_n)) \\\\
+&= (x_1,...,x_n) + (y_1 + z_1,...,y_n+z_n) \\\\
+&= (x_1,...,x_n) + ((y_1,...,y_n) + (z_1,...,z_n)) \\\\
+&= x + (y+z)
+\end{aligned}
+\\]
+
+## Exercise 12
+
+Show that
+
+\\[
+(ab)x = a(bx), \quad \forall x \in \mathbb{F}^n, \forall a,b \in \mathbb{F}
+\\]
+
+**Solution**:
+
+\\[
+\begin{aligned}
+(ab)x
+&= (ab)(x_1,...,x_n) \\\\
+&= ((ab)x_1,...,(ab)x_n)
+\end{aligned}
+\\]
+
+Because \\( (ab)c = a(bc), \quad \forall a,b,c \in \mathbb{F} \\):
+
+\\[
+\begin{aligned}
+&((ab)x_1,...,(ab)x_n) \\\\
+&= (a(bx_1),...,a(bx_n)) \\\\
+&= a(bx_1,...,bx_n) \\\\
+&= a(bx)
+\end{aligned}
+\\]
+
+## Exercise 13
+
+Show that
+
+\\[
+1x = x \quad \forall x \in \mathbb{F}^n
+\\]
+
+**Solution**:
+
+\\[
+\begin{aligned}
+1x
+&= 1(x_1,...,x_n) \\\\
+&= (1x_1,...,1x_n)
+\end{aligned}
+\\]
+
+Because \\( 1a = a, \quad \forall a \in \mathbb{F} \\):
+
+\\[
+\begin{aligned}
+&(1x_1,...,1x_n) \\\\
+&= (x_1,...,x_n) \\\\
+&= x
+\end{aligned}
+\\]
+
+## Exercise 14
+
+Show that
+
+\\[
+\lambda (x + y) = \lambda x + \lambda y
+\quad \forall \lambda \in \mathbb{F}, \forall x,y \in \mathbb{F}^n
+\\]
+
+**Solution**:
+
+\\[
+\begin{aligned}
+\lambda (x + y)
+&= \lambda ((x_1,...,x_n) + (y_1,...,y_n)) \\\\
+&= \lambda (x_1 + y_1,...,x_n+y_n) \\\\
+&= (\lambda(x_1 + y_1),...,\lambda(x_n+y_n)) \\\\
+\end{aligned}
+\\]
+
+Because \\(\lambda(a + b) = \lambda a + \lambda b
+\quad \forall \lambda,a,b \in \mathbb{F} \\):
+
+\\[
+\begin{aligned}
+&(\lambda(x_1 + y_1),...,\lambda(x_n+y_n)) \\\\
+&=(\lambda x_1 + \lambda y_1),...,\lambda x_n + \lambda y_n) \\\\
+&=\lambda x + \lambda y
+\end{aligned}
+\\]
+
+## Exercise 15
+
+Show that
+
+\\[
+(a + b)x = ax + bx
+\quad \forall a,b \in \mathbb{F}, \forall x \in \mathbb{F}^n
+\\]
+
+**Solution**:
+
+\\[
+\begin{aligned}
+(a + b)x
+&= (a + b)(x_1,...,x_n) \\\\
+&= ((a + b)x_1,...,(a + b)x_n)
+\end{aligned}
+\\]
+
+Because \\((a + b)c = ac + bc
+\quad \forall a,b,c \in \mathbb{F} \\):
+
+\\[
+\begin{aligned}
+&((a + b)x_1,...,(a + b)x_n) \\\\
+&= (ax_1 + bx_1,...,ax_n + bx_n) \\\\
+&= (ax_1,...,ax_n) + (bx_1,...,bx_n) \\\\
+&= a(x_1,...,x_n) + b(x_1,...,x_n) \\\\
+&= ax + bx \\\\
+\end{aligned}
+\\]
