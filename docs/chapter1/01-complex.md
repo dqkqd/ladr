@@ -132,13 +132,13 @@ println!("({}) * one = {}", c, c * one);
 
 ### Negative
 
-The definition of negative (addition inverse) can be represented like this:
+The definition of negative (additive inverse) can be represented like this:
 
 \\[
 \forall a \in \mathbb{C}, \exists b \in \mathbb{C}: a + b = 0
 \\]
 
-Such \\( b \\) is called negated of \\( a \\). Suppose \\( a = x + yi \\), then:
+Such \\( b \\) is called a negation of \\( a \\). Suppose \\( a = x + yi \\), then:
 
 \\[
 \begin{aligned}
@@ -155,4 +155,36 @@ let c = Complex { a: 1.0, b: 2.0 };
 # assert_eq!((-c).to_string(), "-1 + -2i");
 println!("-c = {}", -c);
 println!("({}) * ({}) = {}", c, -c, c + (-c));
+```
+
+### Inverse
+
+The definition of inverse (multiplicative inverse) can be represented like this:
+
+\\[
+\forall a \in \mathbb{C}, a \neq 0, \exists b \in \mathbb{C}: ab = 1
+\\]
+
+Such \\( b \\) is called an inverse of \\( a \\). Suppose \\( a = x + yi \\), then:
+
+\\[
+\begin{aligned}
+b &= \frac{1}{x + yi}\\\\
+&= \frac{x - yi}{(x + yi)(x - yi)}\\\\
+&= \frac{x - yi}{(x^2 + y^2) + (yx - xy)i}\\\\
+&= \frac{x - yi}{x^2 + y^2}\\\\
+&= \frac{x}{x^2 + y^2} + \frac{-y}{x^2 + y^2}i
+\end{aligned}
+\\]
+
+```rust
+{{#hidden_include ../../src/complex.rs:def}}
+{{#hidden_include ../../src/complex.rs:one}}
+{{#hidden_include ../../src/complex.rs:op}}
+{{#include ../../src/complex.rs:inv}}
+
+let c = Complex { a: 3.0, b: 4.0 };
+# assert_eq!(c * c.inv(), Complex::one());
+println!("c inverse = {}", c.inv());
+println!("({}) * ({}) = {}", c, c.inv(), c * c.inv());
 ```

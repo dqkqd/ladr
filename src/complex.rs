@@ -29,6 +29,18 @@ impl Complex {
 }
 // ANCHOR_END: one
 
+// ANCHOR: inv
+impl Complex {
+    pub fn inv(&self) -> Complex {
+        let denom = self.a * self.a + self.b * self.b;
+        Complex {
+            a: self.a / denom,
+            b: -self.b / denom,
+        }
+    }
+}
+// ANCHOR_END: inv
+
 // ANCHOR: op
 use std::ops::{Add, Mul, Neg};
 impl Add for Complex {
@@ -105,5 +117,13 @@ mod test {
         let neg_c = -c;
         assert_eq!(neg_c.to_string(), "-2 + -3i");
         assert_eq!(c + neg_c, Complex::zero());
+    }
+
+    #[test]
+    fn inv() {
+        let c = Complex { a: 3.0, b: 4.0 };
+        let inv_c = c.inv();
+        assert_eq!(inv_c.to_string(), "0.12 + -0.16i");
+        assert_eq!(c * inv_c, Complex::one());
     }
 }
