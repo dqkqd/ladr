@@ -31,6 +31,7 @@ The addition and multiplication is also defined:
 
 ```rust
 {{#hidden_include ../../src/complex.rs:def}}
+{{#hidden_include ../../src/complex.rs:inv}}
 {{#hidden_include ../../src/complex.rs:op}}
 let lhs = Complex { a: 2.0, b: 3.0 };
 let rhs = Complex { a: 4.0, b: 5.0 };
@@ -64,6 +65,7 @@ Suppose \\( 0 = x + yi \\), then
 
 ```rust
 {{#hidden_include ../../src/complex.rs:def}}
+{{#hidden_include ../../src/complex.rs:inv}}
 {{#hidden_include ../../src/complex.rs:op}}
 {{#include ../../src/complex.rs:zero}}
 
@@ -119,6 +121,7 @@ Thus \\( 1 = 1 + 0i \\).
 
 ```rust
 {{#hidden_include ../../src/complex.rs:def}}
+{{#hidden_include ../../src/complex.rs:inv}}
 {{#hidden_include ../../src/complex.rs:op}}
 {{#include ../../src/complex.rs:one}}
 
@@ -150,6 +153,7 @@ b &= 0 - a\\\\
 
 ```rust
 {{#hidden_include ../../src/complex.rs:def}}
+{{#hidden_include ../../src/complex.rs:inv}}
 {{#hidden_include ../../src/complex.rs:op}}
 let c = Complex { a: 1.0, b: 2.0 };
 # assert_eq!((-c).to_string(), "-1 + -2i");
@@ -183,8 +187,33 @@ b &= \frac{1}{x + yi}\\\\
 {{#hidden_include ../../src/complex.rs:op}}
 {{#include ../../src/complex.rs:inv}}
 
-let c = Complex { a: 3.0, b: 4.0 };
+let c = Complex { a: 1.0, b: 2.0 };
 # assert_eq!(c * c.inv(), Complex::one());
 println!("c inverse = {}", c.inv());
 println!("({}) * ({}) = {}", c, c.inv(), c * c.inv());
+```
+
+## Subtraction and Division
+
+Having the negation and inversion, subtraction and division can be easily defined:
+
+\\[
+\begin{aligned}
+\text{Subtraction}:&\quad \beta - \alpha = \beta + (-\alpha) \\\\
+\text{Division}:&\quad \frac{\beta}{\alpha} = \beta \left( \frac{1}{\alpha} \right)
+\end{aligned}
+\\]
+
+```rust
+{{#hidden_include ../../src/complex.rs:def}}
+{{#hidden_include ../../src/complex.rs:one}}
+{{#hidden_include ../../src/complex.rs:op}}
+{{#hidden_include ../../src/complex.rs:inv}}
+
+let lhs = Complex { a: 2.0, b: 8.0 };
+let rhs = Complex { a: 1.0, b: 2.0 };
+# assert_eq!((lhs - rhs).to_string(), "1 + 6i");
+# assert_eq!((lhs / rhs).to_string(), "3.6 + 0.8i");
+println!("({}) - ({}) = {}", lhs, rhs, lhs - rhs);
+println!("({}) / ({}) = {}", lhs, rhs, lhs / rhs);
 ```

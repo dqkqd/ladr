@@ -42,7 +42,8 @@ impl Complex {
 // ANCHOR_END: inv
 
 // ANCHOR: op
-use std::ops::{Add, Mul, Neg};
+use std::ops::{Add, Div, Mul, Neg, Sub};
+
 impl Add for Complex {
     type Output = Complex;
     fn add(self, rhs: Self) -> Self::Output {
@@ -63,12 +64,23 @@ impl Mul for Complex {
 }
 impl Neg for Complex {
     type Output = Complex;
-
     fn neg(self) -> Self::Output {
         Complex {
             a: -self.a,
             b: -self.b,
         }
+    }
+}
+impl Sub for Complex {
+    type Output = Complex;
+    fn sub(self, rhs: Self) -> Self::Output {
+        self.add(-rhs)
+    }
+}
+impl Div for Complex {
+    type Output = Complex;
+    fn div(self, rhs: Self) -> Self::Output {
+        self.mul(rhs.inv())
     }
 }
 // ANCHOR_END: op
@@ -121,9 +133,23 @@ mod test {
 
     #[test]
     fn inv() {
-        let c = Complex { a: 3.0, b: 4.0 };
-        let inv_c = c.inv();
-        assert_eq!(inv_c.to_string(), "0.12 + -0.16i");
-        assert_eq!(c * inv_c, Complex::one());
+        let c = Complex { a: 1.0, b: 2.0 };
+        assert_eq!(c.inv().to_string(), "0.2 + -0.4i");
+        assert_eq!(c * c.inv(), Complex::one());
+    }
+
+    #[test]
+    fn sub() {
+        let lhs = Complex { a: 3.0, b: 6.0 };
+        let rhs = Complex { a: 1.0, b: 2.0 };
+        assert_eq!((lhs - rhs).to_string(), "2 + 4i");
+    }
+
+    #[test]
+    fn div() {
+        let lhs = Complex { a: 2.0, b: 8.0 };
+        let rhs = Complex { a: 1.0, b: 2.0 };
+        assert_eq!(Complex::one() / rhs, rhs.inv());
+        assert_eq!((lhs / rhs) * rhs, lhs);
     }
 }
