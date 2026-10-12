@@ -231,3 +231,45 @@ println!("{}", (b - a) / 2.0)
 \\[
 x = (0.5,6,-3.5,0.5)
 \\]
+
+## Exercise 10
+
+Explain why there does not exist \\( \lambda \in \mathbb{C} \\) such that
+
+\\[
+\lambda(2−3i, 5+4i,−6+7i) = (12−5i,7+22i,−32−9i)
+\\]
+
+If there is such \\( \lambda \\), then:
+
+\\[
+\begin{aligned}
+\lambda &=\frac{12 - 5i}{2 - 3i}
+=\frac{7 + 22i}{5 + 4i}
+=\frac{-32 - 9i}{-6 + 7i} \\\\
+&=\frac{(12 - 5i)(2 + 3i)}{13}
+=\frac{(7 + 22i)(5 - 4i)}{41}
+=\frac{(-32 - 9i)(-6-7i)}{-6 + 7i} \\\\
+&=\frac{39 + 26i}{13}
+=\frac{123 + 82i}{41}
+=\frac{129 + 278i}{85} \\\\
+&= 3+2i = 3+2i =\frac{129}{85} + \frac{278}{85}i
+\end{aligned}
+\\]
+
+The last equation is incorrect!
+
+```rust
+{{#hidden_include ../../src/complex.rs:all}}
+let c1 = Complex::new(2, -3);
+let c2 = Complex::new(12, -5);
+println!("({}) / ({}) = {}", c2, c1, c2/c1);
+
+let c1 = Complex::new(5, 4);
+let c2 = Complex::new(7, 22);
+println!("({}) / ({}) = {}", c2, c1, c2/c1);
+
+let c1 = Complex::new(-6, 7);
+let c2 = Complex::new(-32, -9);
+println!("({}) / ({}) = {}", c2, c1, c2/c1);
+```
