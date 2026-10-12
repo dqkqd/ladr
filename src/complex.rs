@@ -13,6 +13,12 @@ impl std::fmt::Display for Complex {
 }
 // ANCHOR_END: def
 
+impl Complex {
+    pub fn new(a: f64, b: f64) -> Complex {
+        Complex { a, b }
+    }
+}
+
 // ANCHOR: zero
 impl Complex {
     pub fn zero() -> Complex {
