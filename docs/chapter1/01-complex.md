@@ -133,9 +133,9 @@ println!("one = {}", one);
 println!("({}) * one = {}", c, c * one);
 ```
 
-### Negative
+### Negation
 
-The definition of negative (additive inverse) can be represented like this:
+The definition of negation (additive inverse) can be represented like this:
 
 \\[
 \forall a \in \mathbb{C}, \exists b \in \mathbb{C}: a + b = 0

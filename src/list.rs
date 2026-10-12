@@ -73,7 +73,7 @@ impl<const N: usize> List<N, Complex> {
 }
 
 // ANCHOR: op
-use std::ops::Add;
+use std::ops::{Add, Neg};
 impl<const N: usize, T> Add for List<N, T>
 where
     T: Add<Output = T> + Copy,
@@ -82,6 +82,17 @@ where
     fn add(self, rhs: Self) -> Self::Output {
         List {
             element: std::array::from_fn(|i| self.element[i] + rhs.element[i]),
+        }
+    }
+}
+impl<const N: usize, T> Neg for List<N, T>
+where
+    T: Neg<Output = T> + Copy,
+{
+    type Output = List<N, T>;
+    fn neg(self) -> Self::Output {
+        List {
+            element: std::array::from_fn(|i| -self.element[i]),
         }
     }
 }
@@ -138,5 +149,10 @@ mod test {
                 + List::<3, Complex>::zero(),
             List::new([Complex::new(1, 2), Complex::new(3, 4), Complex::new(5, 6)])
         );
+    }
+
+    #[test]
+    fn neg() {
+        assert_eq!(-List::new([1, 2, 3]), List::new([-1, -2, -3]));
     }
 }

@@ -49,3 +49,20 @@ let list = List::<3, f64>::new([1.0,2.0,3.0]);
 # assert_eq!((zero).to_string(), "(0,0,0)");
 println!("{} + {} = {}", list, zero, list + zero);
 ```
+
+## Negation (Additive inverse)
+
+Similar to [negation in complex number](./01-complex.md#negation):
+
+\\[
+\forall x \in \mathbb{F}, \exists (-x) \in \mathbb{F}: x + (-x) = 0
+\\]
+
+```rust
+{{#hidden_include ../../src/list.rs:def_all}}
+{{#hidden_include ../../src/list.rs:zero_f64}}
+{{#hidden_include ../../src/list.rs:op}}
+let list = List::new([1,2,3]);
+# assert_eq!((-list).to_string(), "(-1,-2,-3)");
+println!("{} + {} = {}", list, -list, list + (-list));
+```
