@@ -41,6 +41,21 @@ impl Complex {
 }
 // ANCHOR_END: inv
 
+// ANCHOR: pow
+impl Complex {
+    pub fn pow(&self, n: u32) -> Complex {
+        if n == 0 {
+            return Complex::one();
+        }
+        let c = self.pow(n / 2);
+        match n.is_multiple_of(2) {
+            true => c * c,
+            false => c * c * *self,
+        }
+    }
+}
+// ANCHOR_END: pow
+
 // ANCHOR: op
 use std::ops::{Add, Div, Mul, Neg, Sub};
 
@@ -151,5 +166,19 @@ mod test {
         let rhs = Complex { a: 1.0, b: 2.0 };
         assert_eq!(Complex::one() / rhs, rhs.inv());
         assert_eq!((lhs / rhs) * rhs, lhs);
+    }
+
+    #[test]
+    fn pow() {
+        let c = Complex { a: 1.0, b: 2.0 };
+        assert_eq!(c.pow(0), Complex::one());
+        assert_eq!(c.pow(1), c);
+        assert_eq!(c.pow(2), c * c);
+        assert_eq!(c.pow(3), c * c * c);
+        assert_eq!(c.pow(4), c * c * c * c);
+        assert_eq!(c.pow(5), c * c * c * c * c);
+        assert_eq!(c.pow(6), c * c * c * c * c * c);
+        assert_eq!(c.pow(7), c * c * c * c * c * c * c);
+        assert_eq!(c.pow(8), c * c * c * c * c * c * c * c);
     }
 }
