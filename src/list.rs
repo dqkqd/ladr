@@ -73,7 +73,7 @@ impl<const N: usize> List<N, Complex> {
 }
 
 // ANCHOR: op
-use std::ops::{Add, Neg};
+use std::ops::{Add, Mul, Neg};
 impl<const N: usize, T> Add for List<N, T>
 where
     T: Add<Output = T> + Copy,
@@ -93,6 +93,19 @@ where
     fn neg(self) -> Self::Output {
         List {
             element: std::array::from_fn(|i| -self.element[i]),
+        }
+    }
+}
+impl<const N: usize, T, Scalar> Mul<Scalar> for List<N, T>
+where
+    T: Mul<Scalar, Output = T> + Copy,
+    Scalar: Copy,
+{
+    type Output = List<N, T>;
+
+    fn mul(self, rhs: Scalar) -> Self::Output {
+        List {
+            element: std::array::from_fn(|i| self.element[i] * rhs),
         }
     }
 }
@@ -154,5 +167,10 @@ mod test {
     #[test]
     fn neg() {
         assert_eq!(-List::new([1, 2, 3]), List::new([-1, -2, -3]));
+    }
+
+    #[test]
+    fn mul() {
+        assert_eq!(List::new([1, 2, 3]) * 5, List::new([5, 10, 15]));
     }
 }

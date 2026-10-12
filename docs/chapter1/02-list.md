@@ -66,3 +66,20 @@ let list = List::new([1,2,3]);
 # assert_eq!((-list).to_string(), "(-1,-2,-3)");
 println!("{} + {} = {}", list, -list, list + (-list));
 ```
+
+## Multiplication
+
+Multiply a list with a scalar is defined by multiplying each element with the scalar.
+
+\\[
+\lambda (x_1,x_2,...,x_n) = (\lambda x_1, \lambda x_2, \lambda x_n)\quad
+\forall \lambda \in \mathbb{F}, (x_1,x_2,...,x_n) \in \mathbb{F}^n
+\\]
+
+```rust
+{{#hidden_include ../../src/list.rs:def_all}}
+{{#hidden_include ../../src/list.rs:op}}
+let list = List::new([1,2,3]);
+# assert_eq!((list * 5).to_string(), "(5,10,15)");
+println!("{} * {} = {}", list, 5, list * 5);
+```
