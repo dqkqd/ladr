@@ -1,22 +1,35 @@
 // ANCHOR: all
 
 // ANCHOR: def
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Complex {
     a: f64,
     b: f64,
 }
-// ANCHOR_END: def
-
-// ANCHOR: format
 impl std::fmt::Display for Complex {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(f, "{} + {}i", self.a, self.b)
     }
 }
-// ANCHOR_END: format
+// ANCHOR_END: def
 
-// ANCHOR: add_and_mul
+// ANCHOR: zero
+impl Complex {
+    pub fn zero() -> Complex {
+        Complex { a: 0.0, b: 0.0 }
+    }
+}
+// ANCHOR_END: zero
+
+// ANCHOR: one
+impl Complex {
+    pub fn one() -> Complex {
+        Complex { a: 1.0, b: 0.0 }
+    }
+}
+// ANCHOR_END: one
+
+// ANCHOR: op
 use std::ops::{Add, Mul};
 impl Add for Complex {
     type Output = Complex;
@@ -36,7 +49,7 @@ impl Mul for Complex {
         }
     }
 }
-// ANCHOR_END: add_and_mul
+// ANCHOR_END: op
 
 // ANCHOR_END: all
 
@@ -62,5 +75,17 @@ mod test {
         let lhs = Complex { a: 2.0, b: 3.0 };
         let rhs = Complex { a: 4.0, b: 5.0 };
         assert_eq!((lhs * rhs).to_string(), "-7 + 22i");
+    }
+
+    #[test]
+    fn zero() {
+        let c = Complex { a: 2.0, b: 3.0 };
+        assert_eq!(c + Complex::zero(), c);
+    }
+
+    #[test]
+    fn one() {
+        let c = Complex { a: 2.0, b: 3.0 };
+        assert_eq!(c * Complex::one(), c);
     }
 }

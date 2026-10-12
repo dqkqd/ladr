@@ -48,7 +48,7 @@ impl Preprocessor for HiddenInclude {
         let book_src = ctx.config.book.src.clone();
         book.for_each_chapter_mut(|ch| match hidden_include(&book_src, ch) {
             Ok(s) => ch.content = s,
-            Err(e) => eprintln!("failed to process chapter: {e:?}"),
+            Err(e) => eprintln!("failed to process chapter `{}`: {e:?}", ch.name),
         });
         Ok(book)
     }
@@ -100,13 +100,19 @@ fn expand_include(chapter_path: &Path, line: &str) -> Result<String> {
             // find line with start anchor
             let start = lines
                 .iter()
-                .position(|l| l.contains(&format!("ANCHOR: {anchor}")))
-                .with_context(|| format!("Cannot find start anchor {}", anchor))?;
+                .position(|l| {
+                    l.split_once("ANCHOR:")
+                        .is_some_and(|(_, a)| a.trim() == anchor)
+                })
+                .with_context(|| format!("Cannot find start anchor `{}`", anchor))?;
 
             let end = lines
                 .iter()
-                .position(|l| l.contains(&format!("ANCHOR_END: {anchor}")))
-                .with_context(|| format!("Cannot find end anchor {}", anchor))?;
+                .position(|l| {
+                    l.split_once("ANCHOR_END:")
+                        .is_some_and(|(_, a)| a.trim() == anchor)
+                })
+                .with_context(|| format!("Cannot find end anchor `{}`", anchor))?;
 
             &lines[start..end + 1]
         }
