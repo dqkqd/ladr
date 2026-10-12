@@ -35,6 +35,7 @@
             packages = [
               mdbook
               dprint
+              typos
             ];
           };
       }

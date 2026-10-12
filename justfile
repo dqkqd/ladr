@@ -4,3 +4,10 @@ watch:
 test:
   cargo test
   mdbook test
+
+format:
+  cargo fmt
+  dprint fmt
+
+typos:
+  typos
