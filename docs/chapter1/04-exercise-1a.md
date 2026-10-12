@@ -211,3 +211,23 @@ println!("({})^2 = {}", c.to_string(), c.pow(2));
 let c = Complex::new(-2_f64.sqrt()/2.0, -2_f64.sqrt()/2.0);
 println!("({})^2 = {}", c.to_string(), c.pow(2));
 ```
+
+## Exercise 9
+
+Find \\( x \in \mathbb{R}^4 \\) such that
+
+\\[
+(4, −3, 1, 7) + 2x = (5, 9, −6, 8)
+\\]
+
+```rust
+{{#hidden_include ../../src/list.rs:def_all}}
+{{#hidden_include ../../src/list.rs:op}}
+let a = List::<4, f64>::new([4.0, -3.0, 1.0, 7.0]);
+let b = List::<4, f64>::new([5.0, 9.0, -6.0, 8.0]);
+println!("{}", (b - a) / 2.0)
+```
+
+\\[
+x = (0.5,6,-3.5,0.5)
+\\]
