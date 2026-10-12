@@ -34,6 +34,7 @@
             ];
             packages = [
               mdbook
+              dprint
             ];
           };
       }
