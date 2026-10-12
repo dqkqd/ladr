@@ -55,6 +55,23 @@ where
 // ANCHOR_END: fmt_and_eq
 // ANCHOR_END: def_all
 
+// ANCHOR: zero_f64
+impl<const N: usize> List<N, f64> {
+    pub fn zero() -> List<N, f64> {
+        List { element: [0.0; N] }
+    }
+}
+// ANCHOR_END: zero_f64
+
+use crate::complex::Complex;
+impl<const N: usize> List<N, Complex> {
+    pub fn zero() -> List<N, Complex> {
+        List {
+            element: [Complex::zero(); N],
+        }
+    }
+}
+
 // ANCHOR: op
 use std::ops::Add;
 impl<const N: usize, T> Add for List<N, T>
@@ -100,6 +117,26 @@ mod test {
         assert_eq!(
             List::new([1, 2, 3]) + List::new([4, 5, 6]),
             List::new([5, 7, 9])
+        );
+    }
+
+    #[test]
+    fn zero() {
+        assert_eq!(List::<3, f64>::zero().to_string(), "(0,0,0)");
+        assert_eq!(
+            List::<3, Complex>::zero().to_string(),
+            "(0 + 0i,0 + 0i,0 + 0i)"
+        );
+
+        assert_eq!(
+            List::<3, f64>::new([1.0, 2.0, 3.0]) + List::<3, f64>::zero(),
+            List::<3, f64>::new([1.0, 2.0, 3.0])
+        );
+
+        assert_eq!(
+            List::new([Complex::new(1, 2), Complex::new(3, 4), Complex::new(5, 6)])
+                + List::<3, Complex>::zero(),
+            List::new([Complex::new(1, 2), Complex::new(3, 4), Complex::new(5, 6)])
         );
     }
 }

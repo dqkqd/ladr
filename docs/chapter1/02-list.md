@@ -30,3 +30,22 @@ let rhs = List::new([4,5,6]);
 # assert_eq!((lhs + rhs).to_string(), "(5,7,9)");
 println!("{} + {} = {}", lhs, rhs, lhs + rhs);
 ```
+
+## Zero
+
+A list \\( 0 \\) is a list of \\( n \\) zero elements.
+
+\\[
+0 =(0,0,...,0)
+\\]
+
+```rust
+{{#hidden_include ../../src/list.rs:def_all}}
+{{#hidden_include ../../src/list.rs:op}}
+{{#include ../../src/list.rs:zero_f64}}
+
+let zero = List::<3, f64>::zero();
+let list = List::<3, f64>::new([1.0,2.0,3.0]);
+# assert_eq!((zero).to_string(), "(0,0,0)");
+println!("{} + {} = {}", list, zero, list + zero);
+```
