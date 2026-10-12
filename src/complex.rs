@@ -30,7 +30,7 @@ impl Complex {
 // ANCHOR_END: one
 
 // ANCHOR: op
-use std::ops::{Add, Mul};
+use std::ops::{Add, Mul, Neg};
 impl Add for Complex {
     type Output = Complex;
     fn add(self, rhs: Self) -> Self::Output {
@@ -46,6 +46,16 @@ impl Mul for Complex {
         Complex {
             a: self.a * rhs.a - self.b * rhs.b,
             b: self.a * rhs.b + self.b * rhs.a,
+        }
+    }
+}
+impl Neg for Complex {
+    type Output = Complex;
+
+    fn neg(self) -> Self::Output {
+        Complex {
+            a: -self.a,
+            b: -self.b,
         }
     }
 }
@@ -87,5 +97,13 @@ mod test {
     fn one() {
         let c = Complex { a: 2.0, b: 3.0 };
         assert_eq!(c * Complex::one(), c);
+    }
+
+    #[test]
+    fn neg() {
+        let c = Complex { a: 2.0, b: 3.0 };
+        let neg_c = -c;
+        assert_eq!(neg_c.to_string(), "-2 + -3i");
+        assert_eq!(c + neg_c, Complex::zero());
     }
 }
