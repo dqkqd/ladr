@@ -46,3 +46,7 @@ determine whether it is a subspace of \\(F^3\\).
    - \\(\lambda (x_1, x_2, x_3) \in S\\)
      because
      \\(\lambda x_1 = \lambda (5x_3) = 5(\lambda x_3) \\)
+
+## Exercise 2
+
+See [Subspace examples](./07-subspace.md#example-subspaces)
