@@ -174,3 +174,22 @@ and is not a subspace of \\(C^2\\).
    = \cos(\pi) + i\sin(\pi) = -1
    \neq 2^3
    \\)
+
+## Exercise 7
+
+Prove or give a counterexample: If U is a nonempty subset of \\(R^2\\)
+such that U is closed under addition and under taking additive inverses
+(meaning \\(-u \in U\\) whenever \\(u \in U\\)), then U is a subspace
+of \\(R^2\\).
+
+**Solution:**
+
+We can consider U as a subset of \\(R^2\\) that satisfies the conditions
+above
+\\[
+U = \\{ (a,b) \in R^2: a,b \in Z \\}
+\\]
+
+However we can see that with \\(u = 1 \in U\\), and \\(0.5 \in R\\):
+\\(0.5 \times u = 0.5 \notin U\\), so it is not closed under
+multiplication.
