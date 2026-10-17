@@ -141,3 +141,36 @@ so \\(R^2\\) is a subset of \\(C^2\\).
 However, with \\(\lambda \in C\\), and \\(a \in R^2\\), we have
 \\(\lambda a \in C^2\\), so \\(R^2\\) is not closed under multiplication
 and is not a subspace of \\(C^2\\).
+
+## Exercise 6
+
+1. Is \\( \\{(a,b,c) \in R^3: a^3 = b^3\\}\\) a subspace of \\(R^3\\).
+
+   **Solution:**
+
+   Given \\(a^3 = b^3\\), we have \\(a = b\\). This is a subspace of \\(R^3\\) (trivially).
+
+2. Is \\( \\{(a,b,c) \in C^3: a^3 = b^3\\}\\) a subspace of \\(C^3\\).
+
+   **Solution:**
+
+   Given \\(a^3 = b^3\\) and \\(b \neq 0\\), we have
+   \\[
+   \left(\frac{a}{b}\right)^3 = 1 \\\\
+   \implies \frac{a}{b} = 1, \quad
+   \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right), \quad
+   \cos\left(\frac{4\pi}{3}\right) + i\sin\left(\frac{4\pi}{3}\right)
+   \\]
+
+   Given \\((1,1,0)\\) and
+   \\((\cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right),1,0)\\)
+   are in the set. But their sum
+   \\(
+   (1 + \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right),2,0)
+   = (\cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right),2,0)
+   \\)
+   is not because:
+   \\(\left((\cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right)\right)^3
+   = \cos(\pi) + i\sin(\pi) = -1
+   \neq 2^3
+   \\)
