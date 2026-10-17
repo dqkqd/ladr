@@ -213,3 +213,47 @@ So U is closed under scalar multiplication.
 
 However, take \\((1,1)\\) and \\((1,-1)\\) in U. Their sum is \\((2,0)\\)
 is not closed under addition. So U is not a subspace of \\(R^2\\).
+
+## Exercise 9
+
+A function \\(f: R \rightarrow R\\) is called _periodic_ if there exists
+a positive number \\(p\\) such that \\(f(x) = f(x + p)\\) for all \\(x \in R\\).
+Is the set of periodic functions from R to R a subspace of \\(R^R\\)? Explain.
+
+**Solution:**
+
+Consider two periodic functions:
+\\[
+\begin{aligned}
+f(x) &= \sin(x) \\\\
+g(x) &= \sin \left(\frac{x}{\sqrt{2}}\right)
+\end{aligned}
+\\]
+
+We have
+\\[
+(f + g)(x) = \sin(x) + \sin \left(\frac{x}{\sqrt{2}}\right)
+\\]
+
+The period for \\(f\\) and \\(g\\) are \\(2\pi\\) and \\(2\sqrt{2}\pi\\)
+respectively.
+If \\(f + g\\) is a periodic function, its period \\(p\\) must satisfy:
+\\[
+\exists k_1, k_2 \in Z: p = k_12\pi = k_22\sqrt{2}\pi
+\implies \frac{k_1}{k_2} = \sqrt{2}
+\implies k_1^2 = 2k_2^2
+\\]
+
+Let's \\(k_1 = 2^{m_1}h_1\\) and \\(k_2 = 2^{m_2}h_2\\),
+with \\(m_1,m_2,h_1,h_2\in Z\\) and \\(h_1\\) and \\(h_2\\)
+is not divisible by 2. Then
+\\[
+k_1^2 = 2k_2^2 \iff
+2^{2m_1}h_1^2 = 2(2^{2m_2})h_2^2
+\iff 2^{2m_1}h_1^2 = 2^{2m_2 + 1}h_2^2
+\\]
+
+Because \\(h_1\\) and \\(h_2\\) is not divisible by 2: \\(2m_1 = 2m_2 + 1\\).
+There no exists such \\(m_1\\) and \\(m_2\\).
+
+So \\(f + g\\) is not periodic.
