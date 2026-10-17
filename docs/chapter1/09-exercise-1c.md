@@ -257,3 +257,37 @@ Because \\(h_1\\) and \\(h_2\\) is not divisible by 2: \\(2m_1 = 2m_2 + 1\\).
 There no exists such \\(m_1\\) and \\(m_2\\).
 
 So \\(f + g\\) is not periodic.
+
+## Exercise 10
+
+Suppose \\(V_1\\) and \\(V_2\\) are subspaces of \\(V\\). Prove that
+the intersection \\(V_1 \cap V_2\\) is a subspace of \\(V\\).
+
+**Solution:**
+
+- Because \\(0 \in V_1\\) and \\(0 \in V_2\\), so \\(0 \in V_1 \cap V_2\\).
+- Suppose \\(u, v \in V_1 \cap V_2\\). We have \\(u + v \in V_1\\) because
+  \\(u, v \in V_1\\), \\(u + v \in V_2\\) because \\(u,v \in V_2\\).
+  So \\(u + v \in V_1 \cap V_2\\).
+- Suppose \\(v \in V_1 \cap V_2\\). We have \\(\lambda v \in V_1\\) because
+  \\(v \in V_1\\), \\(\lambda v \in V_2\\) because \\(v \in V_2\\).
+  So \\(\lambda v \in V_1 \cap V_2\\).
+
+So \\(V_1 \cap V_2\\) is a subspace of \\(V\\).
+
+## Exercise 11
+
+Prove that the intersection of every collection of subspaces of \\(V\\)
+is a subspace of \\(V\\).
+
+**Solution:**
+
+Let's \\(\\{V_i\\}\\) be any collection of subspaces of \\(V\\).
+
+- Because \\(0 \in V_i\\), so \\(0 \in \cap_{i}V_i\\).
+- \\(\forall u, v \in \cap_{i}V_i\\): Each \\(V_i\\) is closed under addition,
+  \\(u + v \in V_i, \forall i \implies u + v \in \cap_{i}V_i\\).
+- \\(\forall v \in \cap_{i}V_i\\): Each \\(V_i\\) is closed under scalar multiplication,
+  \\(\lambda v \in V_i, \forall i \implies \lambda v \in \cap_{i}V_i\\).
+
+So \\(\cap_{i}V_i\\) is a subspace of \\(V\\).
