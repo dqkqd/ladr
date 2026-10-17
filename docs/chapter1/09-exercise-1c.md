@@ -127,3 +127,17 @@ Suppose \\(S\\) is a subspace of \\(R^{[0,1]}\\).
 b = \int_{0}^{1}(f + g) = \int_{0}^{1}f + \int_{0}^{1}g = b + b = 2b
 \implies b = 0
 \\]
+
+Therefore S is a subspace of \\(F^3\\).
+
+## Exercise 5
+
+Is \\(R^2\\) a subspace of the complex vector space \\(C^2\\)?
+
+**Solution:**
+
+Every number \\(a \in R\\) can be represented as \\(a + 0i \in C\\),
+so \\(R^2\\) is a subset of \\(C^2\\).
+However, with \\(\lambda \in C\\), and \\(a \in R^2\\), we have
+\\(\lambda a \in C^2\\), so \\(R^2\\) is not closed under multiplication
+and is not a subspace of \\(C^2\\).
