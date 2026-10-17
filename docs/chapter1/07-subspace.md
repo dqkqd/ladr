@@ -92,7 +92,7 @@ A subset U of V is a subspace iff:
    - The sum of two elements in the set has limit 0.
    - The product of two elements in the set has limit 0.
 
-## Subs of subspaces
+## Sum of subspaces
 
 Suppose \\(V_1, ..., V_m\\) are subspaces of \\(V\\). The sum of \\(V_1, ..., V_m\\),
 denoted by \\(V_1 + ... + V_m\\) is the set of all possible sums of
