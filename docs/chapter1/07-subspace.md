@@ -1,5 +1,7 @@
 # Subspaces
 
+## Definitions
+
 A subspace U of V is a subset of V if:
 
 - U is also a vector space
