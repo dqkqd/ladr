@@ -193,3 +193,23 @@ U = \\{ (a,b) \in R^2: a,b \in Z \\}
 However we can see that with \\(u = 1 \in U\\), and \\(0.5 \in R\\):
 \\(0.5 \times u = 0.5 \notin U\\), so it is not closed under
 multiplication.
+
+## Exercise 8
+
+Give an example of nonempty subset of \\(R^2\\) such that U is closed
+under scalar multiplication, but U is not a subspace of \\(R^2\\).
+
+**Solution:**
+
+Take this set as an example
+\\[
+U = \\{ (a,b) \in R^2: a^2 = b^2\\}
+\\]
+
+With \\(\forall \lambda \in R\\), \\((a,b)\in U\\), we have
+\\(\lambda(a,b) = (\lambda a, \lambda b) \\),
+and \\((\lambda a)^2 = \lambda^2 a^2 = \lambda^2 b^2 = (\lambda b)^2\\).
+So U is closed under scalar multiplication.
+
+However, take \\((1,1)\\) and \\((1,-1)\\) in U. Their sum is \\((2,0)\\)
+is not closed under addition. So U is not a subspace of \\(R^2\\).
