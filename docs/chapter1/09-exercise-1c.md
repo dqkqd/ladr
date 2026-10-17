@@ -88,4 +88,42 @@ Let's S be the set in the question.
   \end{aligned}
   \\]
 
+## Exercise 4
+
+Suppose \\(b \in R\\). Show that the set of continuous
+real-valued functions \\(f\\) on the interval \\([0, 1]\\)
+such that \\(\int_{0}^{1}f = b\\) is a subspace
+of \\(R^{[0,1]}\\) iff \\(b = 0\\).
+
+**Solution:**
+
+Let's S be the set in the question.
+
+Suppose \\(b = 0\\), we prove that \\(S\\) is a subspace of \\(R^{[0,1]}\\).
+
+- Addition identity. Define a function
+  \\(0: [0, 1] \rightarrow R\\) and \\(0(x) = 0\\).
+
+  We have \\(\int_{0}^{1}0 = 0 \\), and \\(f + 0 = f\\).
+
+- Closed addition. Given \\(f, g \in S \\):
+
+  \\[
+  \int_{0}^{1}(f + g) = \int_{0}^{1}f + \int_{0}^{1}g = 0
+  \\]
+
+  So \\(f + g \in S\\).
+
+- Closed multiplication:
+  \\[
+  \int_{0}^{1}(\lambda f) = \lambda \int_{0}^{1}f = 0
+  \\]
+
   So \\(\lambda f \in S\\).
+
+Suppose \\(S\\) is a subspace of \\(R^{[0,1]}\\).
+
+\\[
+b = \int_{0}^{1}(f + g) = \int_{0}^{1}f + \int_{0}^{1}g = b + b = 2b
+\implies b = 0
+\\]
