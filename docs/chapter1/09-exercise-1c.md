@@ -50,3 +50,42 @@ determine whether it is a subspace of \\(F^3\\).
 ## Exercise 2
 
 See [Subspace examples](./07-subspace.md#example-subspaces)
+
+## Exercise 3
+
+Show that the set of differentiable real-valued functions \\(f\\)
+on the interval \\((-4, 4)\\) such that \\(f^{\prime}(-1) = 3f(2)\\)
+is a subspace of \\(R^{(-4,4)}\\)
+
+**Solution:**
+Let's S be the set in the question.
+
+- Define a 0 function \\(0: (-4,4) \rightarrow R\\),
+  such that \\(0(x) = 0, \forall x \in (-4, 4)\\).
+  We have \\(0^{\prime}(-1) = 0 = 3 \times 0(2)\\). So \\(0 \in S\\)
+
+- Closed addition. With \\(f,g \in S\\), then
+  \\[
+  \begin{aligned}
+  (f + g)^{\prime}(-1)
+  &= f^{\prime}(-1) + g^{\prime}(-1) \\\\
+  &= 3f(2) + 3g(2) \\\\
+  &= 3(f(2) + g(2)) \\\\
+  &= 3(f + g)(2) \\\\
+  \end{aligned}
+  \\]
+
+  So \\(f + g \in S\\).
+
+- Closed multiplication.
+  \\[
+  \begin{aligned}
+  (\lambda f)^{\prime}(-1)
+  &= \lambda (f^{\prime}(-1)) \\\\
+  &= \lambda (3f(2)) \\\\
+  &= 3(\lambda f(2)) \\\\
+  &= 3(\lambda f)(2) \\\\
+  \end{aligned}
+  \\]
+
+  So \\(\lambda f \in S\\).
