@@ -291,3 +291,28 @@ Let's \\(\\{V_i\\}\\) be any collection of subspaces of \\(V\\).
   \\(\lambda v \in V_i, \forall i \implies \lambda v \in \cap_{i}V_i\\).
 
 So \\(\cap_{i}V_i\\) is a subspace of \\(V\\).
+
+## Exercise 12
+
+Prove that the union of two subspaces of \\(V\\) is a subspace of \\(V\\)
+iff one of the subspaces is contained in the other.
+
+**Solution:**
+
+If one of the subspace is contained in the other, then their union
+is the larger subspace itself.
+
+Suppose \\(V_1, V_2\\) are two subspace of \\(V\\) with \\(V_1 \cup V_2\\)
+is also a subspace of \\(V\\).
+If \\(V_1 \setminus V_2 = \emptyset \\),
+then it is obvious that \\(V_2 \subseteq V_1\\).
+Consider the cases where \\(V_1 \setminus V_2 \neq \emptyset \\).
+Let's \\(v_2 \in V_2, v \in V_1 \setminus V_2\\).
+Since \\(V_1 \cup V_2\\) is a closed under addition:
+\\(v + v_2 \in V_1 \cup V_2\\), there are two cases:
+
+- \\(v + v_2 \in V_2\\): Because \\(v_2, -v_2 \in V_2\\),
+  so \\((v + v_2) + (-v_2) = v \in V_2\\). This is impossible since
+  \\(v \in V_1 \setminus V_2\\).
+- \\(v + v_2 \in V_1\\): Because \\(v, -v \in V_1\\), so
+  \\((v + v_2) + (-v) = v_2 \in V_1\\), which means \\(V_2 \subseteq V_1\\)
