@@ -692,3 +692,56 @@ x - y + a = 0 & (4) \\\\
 
 The only way to represent 0 in \\(U + W_1 + W_2 + W_3\\) is \\(0 = 0 + 0 + 0 + 0\\).
 Therefore \\(F^5 = U + W_1 + W_2 + W_3 = U \oplus W_1 \oplus W_2 \oplus W_3\\).
+
+## Exercise 23
+
+Prove or give a counterexample: If \\(V_1, V_2, U\\) are
+subspaces of \\(V\\) such that
+\\[
+V = V1 \oplus U \quad \text{and} \quad V = V_2 \oplus U
+\\]
+then \\(V_1 = V_2\\).
+
+**Solution:**
+
+Consider these subsets of \\(V = R^2\\):
+
+\\[
+\begin{aligned}
+U &= \\{(x,0) \in R^2: x \in R\\}\\\\
+V_1 &= \\{(x,2x) \in R^2: x \in R\\}\\\\
+V_2 &= \\{(x,3x) \in R^2: x \in R\\}
+\end{aligned}
+\\]
+
+We have
+\\[
+\begin{aligned}
+&U + V_1
+= \\{(x+y,2y) \in R^2: x,y \in R\\}
+= \\{(z,t) \in R^2: z,t \in R\\} = R^2\\\\
+&U + V_2
+= \\{(x+y,3y) \in R^2: x,y \in R\\}
+= \\{(z,t) \in R^2: z,t \in R\\} = R^2
+\end{aligned}
+\\]
+
+Suppose \\(u = (x,y) \in U \cap V_1\\), then
+
+\\[
+\begin{aligned}
+&(x,y) = (a,0) = (b,2b) \\\\
+\iff
+&\begin{cases}
+x = a = b \\\\
+y = 0 = 2b\\\\
+\end{cases} \\\\
+\implies &x = y = 0 \implies u=(0,0)
+\end{aligned}
+\\]
+
+So \\(U \cap V_1 = \\{0\\}\\), similarly \\(U \cap V_2 = \\{0\\}\\).
+Therefore \\(V = V1 \oplus U = V_2 \oplus U\\).
+
+However, we can see that \\((1,2) \in V_1\\) but \\((1,2) \notin V_2\\),
+which means \\(V_1 \neq V_2\\).
