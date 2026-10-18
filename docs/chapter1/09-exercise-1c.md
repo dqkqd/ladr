@@ -520,3 +520,59 @@ For an example, suppose
 \\]
 
 We can see that \\(V_1 \neq V_2\\) but \\(V_1 + U = V_2 + U = R^2\\) \\(\square\\)
+
+## Exercise 20
+
+Suppose
+
+\\[
+U= \\{(x,x,y,y) \in F^4: x, y \in F \\}\\\\
+\\]
+
+Find a subspace \\(W\\) of \\(F^4\\) such that \\(F^4 = U \oplus W\\).
+
+**Solution:**
+
+\\(W = \\{(x,2x,y,2y) \in F^4: x,y \in F\\}\\)
+
+We have
+\\[
+\begin{aligned}
+U + W
+&= \\{(x+z,x+2z,y+t,y+2t) \in F^4: x,y,z,t \in F\\} \\\\
+&= \\{(x,x+z^{\prime},y,y+t^{\prime}) \in F^4:
+x,y,z^{\prime},t^{\prime} \in F\\} \\\\
+&= \\{(x,z^{\prime\prime},y,t^{\prime\prime}) \in F^4:
+x,y,z^{\prime\prime},t^{\prime\prime} \in F\\} \\\\
+&= F^4
+\end{aligned}
+\\]
+
+Suppose \\(u = (x,y,z,t) \in U \cap W\\).
+
+\\[
+\begin{aligned}
+&(x,y,z,t) = (a,a,b,b) = (c,2c,d,2d) \\\\
+\iff
+&\begin{cases}
+x = a = c \\\\
+y = a = 2c \\\\
+z = b = d \\\\
+t = b = 2d \\\\
+\end{cases} \\\\
+\iff
+&\begin{cases}
+x = y = a = c = 2c\\\\
+z = t = b = d = 2d \\\\
+\end{cases} \\\\
+\iff
+&\begin{cases}
+x = y = a = c = 0\\\\
+z = t = b = d = 0 \\\\
+\end{cases} \\\\
+\iff
+&u = (0,0,0,0)
+\end{aligned}
+\\]
+
+So \\(U \cap W = {0}\\), and \\(F^4 = U + W = U \oplus W\\).
