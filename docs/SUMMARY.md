@@ -13,3 +13,4 @@
 
 - [Chapter 2: Finite-Dimensional Vector Spaces](./chapter2/00-main.md)
   - [Linear Combinations and Span](./chapter2/01-linear-combination-and-span.md)
+  - [Linear Independence](./chapter2/02-linear-independence.md)
