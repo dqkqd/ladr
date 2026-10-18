@@ -7,7 +7,7 @@
   - [Exercise 1A](./chapter1/04-exercise-1a.md)
   - [Vector Space](./chapter1/05-vectorspace.md)
   - [Exercise 1B](./chapter1/06-exercise-1b.md)
-  - [Supspaces](./chapter1/07-subspace.md)
+  - [Subspaces](./chapter1/07-subspace.md)
   - [Direct sum](./chapter1/08-directsum.md)
   - [Exercise 1C](./chapter1/09-exercise-1c.md)
 
