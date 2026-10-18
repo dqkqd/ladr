@@ -633,3 +633,62 @@ w = 2a = c & (5) \\\\
 
 It is easy to verify that \\(0 \in U \cap W\\).
 So \\(U \cap W = {0}\\), and \\(F^5 = U + W = U \oplus W\\).
+
+## Exercise 22
+
+Suppose
+
+\\[
+U= \\{(x,y,x+y,x-y,2x) \in F^5: x, y \in F \\}\\\\
+\\]
+
+Find three subspaces \\(W_1, W_2, W_3\\) of \\(F^5\\),
+none of which equals \\(\\{0\\}\\), such that
+\\(F^5 = U \oplus W_1 \oplus W_2 \oplus W_3 \\).
+
+**Solution:**
+
+\\[
+W_1 = \\{(x,0,0,x,x) \in F^5: x \in F\\}\\\\
+W_2 = \\{(0,x,0,0,0) \in F^5: x \in F\\}\\\\
+W_3 = \\{(0,0,x,0,0) \in F^5: x \in F\\}\\\\
+\\]
+
+We have
+\\(
+U + W_1 + W_2 + W_3
+= \\{(x+a,x+b,x+y+c,x-y+a,2x+a) \in F^5: x,y,a,b,c \in F\\}
+\\)
+This is proved in [Exercise 21](#exercise-21) that the set is \\(F^5\\).
+
+Consider the way to represent 0 in \\(U + W_1 + W_2 + W_3\\):
+
+\\[
+\begin{aligned}
+&(0,0,0,0,0) \\\\
+&= (x,y,x+y,x-y,2x) + (a,0,0,a,a) + (0,b,0,0,0) + (0,0,c,0,0) \\\\
+&= (x+a,x+b,x+y+c,x-y+a,2x+a)\\\\
+\iff
+&\begin{cases}
+x + a = 0 & (1)\\\\
+x + b = 0 & (2)\\\\
+x + y + c = 0 & (3) \\\\
+x - y + a = 0 & (4) \\\\
+2x + a = 0 & (5) \\\\
+\end{cases} \\\\
+&(1), (5) \implies x = a = 0 \\\\
+&(2) \implies b = -x = 0 \\\\
+&(4) \implies y = x + a = 0 \\\\
+&(3) \implies c = -(x + y) = 0 \\\\
+\implies
+&\begin{cases}
+(x,y,x+y,x-y,2x) = (0,0,0,0,0) \\\\
+(a,0,0,a,a) = (0,0,0,0,0) \\\\
+(0,b,0,0,0) = (0,0,0,0,0) \\\\
+(0,0,c,0,0) = (0,0,0,0,0) \\\\
+\end{cases} \\\\
+\end{aligned}
+\\]
+
+The only way to represent 0 in \\(U + W_1 + W_2 + W_3\\) is \\(0 = 0 + 0 + 0 + 0\\).
+Therefore \\(F^5 = U + W_1 + W_2 + W_3 = U \oplus W_1 \oplus W_2 \oplus W_3\\).
