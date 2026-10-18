@@ -409,7 +409,7 @@ With \\(U + U = \\{u + v: u,v \in U \\}\\), we prove that \\(U + U = U\\).
 - \\(U \subseteq U + U\\): every element \\(u \in U\\) can be replaced by
   \\(u + 0 \in U + U\\).
 
-So \\(U + U = U\\) \\(\square\\).
+So \\(U + U = U\\) \\(\blacksquare\\).
 
 ## Exercise 16
 
@@ -424,7 +424,7 @@ W + U = \\{w + u: u \in U, w \in W \\}
 \\]
 Because \\(U,W \subseteq V\\), if \\(u \in U, w \in W\\), then
 \\(u, w \in V\\), therefore \\(u + w = w + u\\).
-So \\(U + W = W + U\\) \\(\square\\).
+So \\(U + W = W + U\\) \\(\blacksquare\\).
 
 ## Exercise 17
 
@@ -443,7 +443,7 @@ V_1 + (V_2 + V_3)
 
 Because \\(V_1,V_2,V_3 \subseteq V\\), if \\(v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\),
 then \\(v_1,v_2,v_3 \in V\\), therefore \\((v_1 + v_2) + v_3 = v_1 + (v_2 + v_3)\\).
-So \\((V_1 + V_2) + V_3 = V_1 + (V_2 + V_3)\\) \\(\square\\).
+So \\((V_1 + V_2) + V_3 = V_1 + (V_2 + V_3)\\) \\(\blacksquare\\).
 
 ## Exercise 18
 
@@ -494,7 +494,7 @@ w = 0 \quad \forall w \in W \\\\
 \\]
 
 We can verify that \\(T + T = \\{0\\} + \\{0\\} = \\{0\\} = T\\),
-so \\(T\\) is the only subspace that has additive inverses \\(\square\\).
+so \\(T\\) is the only subspace that has additive inverses \\(\blacksquare\\).
 
 ## Exercise 19
 
@@ -519,7 +519,7 @@ For an example, suppose
 \end{aligned}
 \\]
 
-We can see that \\(V_1 \neq V_2\\) but \\(V_1 + U = V_2 + U = R^2\\) \\(\square\\)
+We can see that \\(V_1 \neq V_2\\) but \\(V_1 + U = V_2 + U = R^2\\) \\(\blacksquare\\)
 
 ## Exercise 20
 
@@ -745,3 +745,94 @@ Therefore \\(V = V1 \oplus U = V_2 \oplus U\\).
 
 However, we can see that \\((1,2) \in V_1\\) but \\((1,2) \notin V_2\\),
 which means \\(V_1 \neq V_2\\).
+
+## Exercise 24
+
+A function \\(f: R \rightarrow R \\) is called _even_ if
+\\[
+f(-x) = f(x), \quad \forall x \in R
+\\]
+
+A function \\(f: R \rightarrow R \\) is called _odd_ if
+\\[
+f(-x) = -f(x), \quad \forall x \in R
+\\]
+
+Let \\(V_e\\) denote the set of real-valued even functions
+on R and let \\(V_o\\) denote the set of real-valued odd
+functions on R. Show that \\(R^R = V_e \oplus V_o\\).
+
+**Solution:**
+
+Define \\(0: R \rightarrow R\\) as a zero function such that
+\\(0(x) = 0\\), \\(\forall x \in R\\).
+
+We show that \\(V_e, V_o\\) are subspaces of \\(R^R\\):
+
+- \\(0(-x) = 0(x) = 0(-x) = 0\\) so \\(V_e\\) and \\(V_o\\) contains 0
+- Sum of even functions are an even function:
+  \\((f+g)(-x) = f(-x) + g(-x) = f(x) + g(x) = (f+g)(x)\\)
+
+  Sum of odd functions are an odd function:
+  \\((f+g)(-x) = f(-x) + g(-x) = -f(x) + -g(x) = -(f(x) + g(x))
+  =-(f+g)(x)
+  \\)
+
+- Scalar multiplication of an even function is an even function:
+  \\((\lambda f)(-x) = \lambda f(-x) = \lambda f(x) = (\lambda f)(x)\\)
+
+  Scalar multiplication of an odd function is an odd function:
+  \\((\lambda f)(-x) = \lambda f(-x) = -\lambda f(x) = -(\lambda f)(x)\\)
+
+Next, we prove that \\(R^R = V_e + V_o\\): every function \\(f\in R^R\\)
+can be represented as a sum of an even and an odd function.
+Let's call
+\\[
+e(x) = \frac{f(x) + f(-x)}{2} \\\\
+o(x) = \frac{f(x) - f(-x)}{2}
+\\]
+
+We can verify that \\(e(x)\\) and \\(o(x)\\) are even
+and odd functions respectively.
+\\[
+\begin{aligned}
+e(-x)
+&= \frac{f(-x) + f(-(-x))}{2}
+= \frac{f(-x) + f(x)}{2}
+= \frac{f(x) + f(-x)}{2}
+= e(x)
+\\\\
+o(-x)
+&= \frac{f(-x) - f(-(-x))}{2}
+= \frac{f(-x) - f(x)}{2}
+= -\frac{f(x) - f(-x)}{2}
+= -o(x)
+\end{aligned}
+\\]
+
+And:
+\\[
+e(x) + o(x)
+= \frac{f(x) + f(-x)}{2} + \frac{f(x) - f(-x)}{2}
+= \frac{f(x) + f(-x) + f(x) - f(-x)}{2}
+= f(x)
+\\]
+
+So:
+\\[
+R^R = V_e + V_o
+\\]
+
+Finally, we prove \\(V_e \cap V_o = \\{0\\}\\).
+For all \\(f \in V_e \cap V_o\\), \\(f\\) is both even and odd:
+
+\\[
+\begin{aligned}
+&f(-x) = f(x) = -f(x), & \forall x \in R \\\\
+\implies &2f(x) = 0, & \forall x \in R \\\\
+\implies &f(x) = 0, & \forall x \in R
+\end{aligned}
+\\]
+
+This mean \\(f = 0\\) and \\(V_e \cap V_o = \\{0\\}\\), so \\(R^R = V_e \oplus V_o\\)
+\\(\blacksquare\\).
