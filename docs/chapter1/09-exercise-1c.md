@@ -425,3 +425,22 @@ W + U = \\{w + u: u \in U, w \in W \\}
 Because \\(U,W \subseteq V\\), if \\(u \in U, w \in W\\), then
 \\(u, w \in V\\), therefore \\(u + w = w + u\\).
 So \\(U + W = W + U\\) \\(\square\\).
+
+## Exercise 17
+
+Is the operation of addition on the subspaces of
+V associative? In other words, if \\(V_1, V_2, V_3\\)
+are subspaces of V, is
+\\((V_1 + V_2) + V_3 = V_1 + (V_2 + V_3)\\)?
+
+**Solution:**
+\\[
+(V_1 + V_2) + V_3
+= \\{(v_1 + v_2) + v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3 \\}\\\\
+V_1 + (V_2 + V_3)
+= \\{v_1 + (v_2 + v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3 \\}
+\\]
+
+Because \\(V_1,V_2,V_3 \subseteq V\\), if \\(v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\),
+then \\(v_1,v_2,v_3 \in V\\), therefore \\((v_1 + v_2) + v_3 = v_1 + (v_2 + v_3)\\).
+So \\((V_1 + V_2) + V_3 = V_1 + (V_2 + V_3)\\) \\(\square\\).
