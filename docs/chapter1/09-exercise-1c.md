@@ -371,3 +371,26 @@ with \\(v_3^{\prime} \in V_3 \setminus (V_1 \cup V_2)\\) then:
 \end{aligned}
 \\]
 This is a contraction because \\(v_1 \in V_1 \setminus (V_2 \cup V_3)\\).
+
+## Exercise 14
+
+Suppose
+
+\\[
+U = \\{(x,-x,2x) \in F^3: x \in F\\} \quad
+W = \\{(x,x,2x) \in F^3: x \in F\\}
+\\]
+
+Describe \\(U + W\\) using symbols, and also give a description of
+U+ W that uses no symbols.
+
+**Solution:**:
+
+We see that \\((x,-x,2x) + (y,y,2y) = (x+y,y-x,2(x+y))\\),
+so
+
+\\[
+U + W = \\{(x,y,2x) \in F^3: x, y \in F\\}
+\\]
+
+\\(U + W\\) is a set in \\(F^3\\) whose third element is twice the first.
