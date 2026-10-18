@@ -444,3 +444,54 @@ V_1 + (V_2 + V_3)
 Because \\(V_1,V_2,V_3 \subseteq V\\), if \\(v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\),
 then \\(v_1,v_2,v_3 \in V\\), therefore \\((v_1 + v_2) + v_3 = v_1 + (v_2 + v_3)\\).
 So \\((V_1 + V_2) + V_3 = V_1 + (V_2 + V_3)\\) \\(\square\\).
+
+## Exercise 18
+
+Does the operation of addition on the subspaces of V
+have an additive identity? Which subspaces have additive
+inverses?
+
+**Solution:**
+
+Suppose \\(T\\) is an additive identity on \\(V\\).
+For every subspace \\(U\\) of \\(V\\):
+\\[
+\begin{aligned}
+&U + T = U \\\\
+\iff
+&\\{ u + t: u \in U, t \in T \\} =
+\\{ u: u \in U \\} \\\\
+\iff &u_1+t=u_2 \quad \forall u_1 \in U, t \in T, \exists u_2 \in U \\\\
+\end{aligned}
+\\]
+
+The condition above must hold for all subspaces in \\(V\\),
+consider the smallest subspace \\(\\{0\\}\\) of \\(V\\),
+we have
+\\(\forall t \in T\\): \\(0 + t = 0 \implies t = 0\\).
+This means \\(T = \\{0\\}\\).
+
+Suppose \\(U\\) and \\(W\\) is a subspace of \\(V\\) such that
+\\(U + W = T\\):
+\\[
+\begin{aligned}
+&U + W = T \\\\
+\iff &\\{ u + w: u \in U, w \in W \\} = \\{0\\} \\\\
+\iff &u + w = 0 \quad \forall u \in U, w \in W \\\\
+\implies
+&\begin{cases}
+u + 0 = 0 \quad \forall u \in U \\\\
+0 + w = 0 \quad \forall w \in W \\\\
+\end{cases} \\\\
+\implies
+&\begin{cases}
+u = 0 \quad \forall u \in U \\\\
+w = 0 \quad \forall w \in W \\\\
+\end{cases} \\\\
+\implies
+&U = W = T
+\end{aligned}
+\\]
+
+We can verify that \\(T + T = \\{0\\} + \\{0\\} = \\{0\\} = T\\),
+so \\(T\\) is the only subspace that has additive inverses \\(\square\\).
