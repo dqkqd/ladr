@@ -410,3 +410,18 @@ With \\(U + U = \\{u + v: u,v \in U \\}\\), we prove that \\(U + U = U\\).
   \\(u + 0 \in U + U\\).
 
 So \\(U + U = U\\) \\(\square\\).
+
+## Exercise 16
+
+Is the operation of addition on the subspaces of
+V commutative? In other words, if U and W are
+subspaces of V, is \\(U + W = W + U\\)?
+
+**Solution:**
+\\[
+U + W = \\{u + w: u \in U, w \in W \\}\\\\
+W + U = \\{w + u: u \in U, w \in W \\}
+\\]
+Because \\(U,W \subseteq V\\), if \\(u \in U, w \in W\\), then
+\\(u, w \in V\\), therefore \\(u + w = w + u\\).
+So \\(U + W = W + U\\) \\(\square\\).
