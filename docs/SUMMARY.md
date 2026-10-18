@@ -10,3 +10,6 @@
   - [Supspaces](./chapter1/07-subspace.md)
   - [Direct sum](./chapter1/08-directsum.md)
   - [Exercise 1C](./chapter1/09-exercise-1c.md)
+
+- [Chapter 2: Finite-Dimensional Vector Spaces](./chapter2/00-main.md)
+  - [Linear Combinations and Span](./chapter2/01-linear-combination-and-span.md)

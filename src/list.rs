@@ -205,4 +205,12 @@ mod test {
     fn mul() {
         assert_eq!(List::new([1, 2, 3]) * 5, List::new([5, 10, 15]));
     }
+
+    #[test]
+    fn linear_combination() {
+        let u1 = List::new([2, 1, -3]);
+        let u2 = List::new([1, -2, 4]);
+        let v = u1 * 6 + u2 * 5;
+        assert_eq!(v, List::new([17, -4, 2]));
+    }
 }
