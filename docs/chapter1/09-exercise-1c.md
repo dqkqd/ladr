@@ -316,3 +316,58 @@ Since \\(V_1 \cup V_2\\) is a closed under addition:
   \\(v \in V_1 \setminus V_2\\).
 - \\(v + v_2 \in V_1\\): Because \\(v, -v \in V_1\\), so
   \\((v + v_2) + (-v) = v_2 \in V_1\\), which means \\(V_2 \subseteq V_1\\)
+
+## Exercise 13
+
+Prove that the union of three subspaces of \\(V\\) is a subspace of \\(V\\)
+iff one of the subspaces contains the other two.
+
+**Solution:**
+
+If one of the subspace contains the other two, then their union
+is the largest subspace itself.
+
+Suppose \\(V_1,V_2,V_3\\) are three subspace of \\(V\\) with
+\\(V_1 \cup V_2 \cup V_3 \\) is also a subspace of \\(V\\).
+If \\(V_1 \subseteq (V_2 \cup V_3)\\), then
+\\(V_1 \cup V_2 \cup V_3 = V_2 \cup V_3 \\),
+based on the two subspaces problem solved in [Exercise 12](#exercise-12),
+we know that \\(V_2 \subseteq V_3\\) or \\(V_3 \subseteq V_2\\).
+Thus the largest subspace will contain the two smaller ones.
+
+Therefore we only need to consider that \\(V_1 \setminus (V_2 \cup V_3) \neq \emptyset\\),
+which means \\(\exists v_1 \in V_1 \setminus (V_2 \cup V_3)\\).
+Similarly:
+\\[
+\exists v_2 \in V_2 \setminus (V_3 \cup V_1)\\\\
+\exists v_3 \in V_3 \setminus (V_1 \cup V_2)\\\\
+\\]
+
+Look at the sum \\(v_1 + v_2\\), if it is in \\(V_1 \cup V_2\\):
+
+- \\(v_1 + v_2 \in V_1
+  \implies v_1 + v_2 + (-v_1) \in V_1
+  \implies v_2 \in V_1 \\)
+- \\(v_1 + v_2 \in V_2
+  \implies v_2 + v_1 + (-v_1) \in V_1
+  \implies v_1 \in V_2 \\)
+
+Thus \\(v_1 + v_2 \in V_3 \setminus (V_1 \cup V_2) \\). Similarly:
+\\[
+v_2 + v_3 \in V_1 \setminus (V_2 \cup V_3) \\\\
+v_3 + v_1 \in V_2 \setminus (V_3 \cup V_1) \\\\
+\\]
+
+Consider the sum \\(2v_1 + v_2 = v_1 + (v_1 + v_2) = v_1 + v_3^{\prime} \\),
+with \\(v_3^{\prime} \in V_3 \setminus (V_1 \cup V_2)\\) then:
+\\[
+\begin{aligned}
+&v_1 + v_3^{\prime} \in V_2 \setminus (V_1 \cup V_3) \\\\
+\implies &2v_1 + v_2 \in V_2 \setminus (V_1 \cup V_3) \\\\
+\implies &(2v_1 + v_2) + (-v_2) \in V_2 \\\\
+\implies &2v_1 \in V_2 \\\\
+\implies &\frac{1}{2} (2v_1) \in V_2 \\\\
+\implies &v_1 \in V_2
+\end{aligned}
+\\]
+This is a contraction because \\(v_1 \in V_1 \setminus (V_2 \cup V_3)\\).
