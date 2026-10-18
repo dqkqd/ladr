@@ -394,3 +394,19 @@ U + W = \\{(x,y,2x) \in F^3: x, y \in F\\}
 \\]
 
 \\(U + W\\) is a set in \\(F^3\\) whose third element is twice the first.
+
+## Exercise 15
+
+Suppose U is a subspace of V, what is U + U?
+
+**Solution:**
+
+With \\(U + U = \\{u + v: u,v \in U \\}\\), we prove that \\(U + U = U\\).
+
+- \\(U + U \subseteq U\\): every element in \\(U + U\\) is indeed an element
+  in \\(U\\) because \\(U\\) is closed under addition.
+
+- \\(U \subseteq U + U\\): every element \\(u \in U\\) can be replaced by
+  \\(u + 0 \in U + U\\).
+
+So \\(U + U = U\\) \\(\square\\).
