@@ -576,3 +576,60 @@ z = t = b = d = 0 \\\\
 \\]
 
 So \\(U \cap W = {0}\\), and \\(F^4 = U + W = U \oplus W\\).
+
+## Exercise 21
+
+Suppose
+
+\\[
+U= \\{(x,y,x+y,x-y,2x) \in F^5: x, y \in F \\}\\\\
+\\]
+
+Find a subspace \\(W\\) of \\(F^5\\) such that \\(F^5 = U \oplus W\\).
+
+**Solution:**
+
+\\(W = \\{(x,y,z,x,x) \in F^5: x,y,z \in F\\}\\)
+
+We have
+\\[
+\begin{aligned}
+U + W
+&= \\{(x+a,x+b,x+y+c,x-y+a,2x+a) \in F^5: x,y,a,b,c \in F\\} \\\\
+&= \\{(x+a,z,x+y+c,x-y+a,2x+a) \in F^5: x,y,a,z,t \in F\\}
+\quad (\text{replace } x+b \text{ by } z) \\\\
+&= \\{(x+a,z,t,x-y+a,2x+a) \in F^5: x,y,a,z,t \in F\\}
+\quad (\text{replace } x+y+c \text{ by } t) \\\\
+&= \\{(x+a,z,t,w,2x+a) \in F^5: x,w,a,z,t \in F\\}
+\quad (\text{replace } x-y+a \text{ by } w) \\\\
+&= \\{(u,z,t,w,u+x) \in F^5: x,w,u,z,t \in F\\}
+\quad (\text{replace } x+a \text{ by } u) \\\\
+&= \\{(u,z,t,w,v) \in F^5: v,w,u,z,t \in F\\}
+\quad (\text{replace } u+x \text{ by } v) \\\\
+&= F^5
+\end{aligned}
+\\]
+
+Suppose \\(u = (x,y,z,t,w) \in U \cap W\\).
+
+\\[
+\begin{aligned}
+&(x,y,z,t,w) = (a,a,a+b,a-b,2a) = (c,d,e,c,c) \\\\
+\iff
+&\begin{cases}
+x = a = c & (1) \\\\
+y = a = d & (2)\\\\
+z = a+b = e & (3) \\\\
+t = a-b = c & (4) \\\\
+w = 2a = c & (5) \\\\
+\end{cases} \\\\
+&(1), (5) \implies c = a = 0 \\\\
+&(2) \implies d = a = 0 \\\\
+&(4) \implies b = a - c= 0 \\\\
+&(3) \implies e = a + b = 0 \\\\
+\implies &u=(0,0,0,0,0)
+\end{aligned}
+\\]
+
+It is easy to verify that \\(0 \in U \cap W\\).
+So \\(U \cap W = {0}\\), and \\(F^5 = U + W = U \oplus W\\).
