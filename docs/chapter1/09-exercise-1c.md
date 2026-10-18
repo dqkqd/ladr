@@ -495,3 +495,28 @@ w = 0 \quad \forall w \in W \\\\
 
 We can verify that \\(T + T = \\{0\\} + \\{0\\} = \\{0\\} = T\\),
 so \\(T\\) is the only subspace that has additive inverses \\(\square\\).
+
+## Exercise 19
+
+Prove of give a counterexample: If \\(V_1, V_2, U\\) are
+subspaces of \\(V\\) such that
+\\[
+V_1 + U = V_2 + U
+\\]
+then \\(V_1 = V_2\\)
+
+**Solution:**
+
+If \\(U = V\\), then it is obvious that the condition is true
+for all \\(V_1, V_2\\) without them to be equals.
+
+For an example, suppose
+\\[
+\begin{aligned}
+&V = U = R^2\\\\
+&V_1 = \\{(x, 0) \in R^2: x \in R \\}\\\\
+&V_2 = \\{(0, y) \in R^2: y \in R \\}\\\\
+\end{aligned}
+\\]
+
+We can see that \\(V_1 \neq V_2\\) but \\(V_1 + U = V_2 + U = R^2\\) \\(\square\\)
