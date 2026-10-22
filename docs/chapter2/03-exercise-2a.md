@@ -217,3 +217,39 @@ x(2,3,1) + y(1,-1,2) + z(7,3,c) = 0\\\\
   \\]
 
 \\(\blacksquare\\).
+
+## Exercise 7
+
+1. Show that if we think \\(C\\) as a vector space over \\(R\\), then the list
+   \\(1 + i, 1 - i\\) is linearly independent.
+
+   **Solution:**
+
+   Suppose there exists \\(a,b \in R\\) such that
+   \\[
+   \begin{aligned}
+   &a(1 + i) + b(1 - i) = 0 \\\\
+   \iff
+   &\begin{cases}
+   a + b = 0 \\\\
+   a - b = 0
+   \end{cases} \\\\
+   \iff
+   &a = b = 0
+   \end{aligned}
+   \\]
+   So \\(1 + i, 1 - i\\) is linearly independent \\(\blacksquare\\).
+
+2. Show that if we think \\(C\\) as a vector space over \\(C\\), then the list
+   \\(1 + i, 1 - i\\) is linearly dependent.
+
+   **Solution:**
+   There exists \\(a = 1 - i \neq 0\\), \\(b = -1 - i \neq 0\\), such that
+   \\[
+   \begin{aligned}
+   a(1 + i) + b(1 - i) &= (1 - i)(1 + i) + (-1 - i)(1 - i) \\\\
+   &= (1 - i)(1 + i) - (1 + i)(1 - i) = 0
+   \end{aligned}
+   \\]
+
+   So \\(1 + i, 1 - i\\) is linearly dependent \\(\blacksquare\\).
