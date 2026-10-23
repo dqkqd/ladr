@@ -450,3 +450,77 @@ v_1,...,v_m,w \text{ is linearly independent } \iff
 w \notin \text{span}(v_1,...,v_m)
 \\]
 \\(\blacksquare\\).
+
+## Exercise 14
+
+Suppose \\(v_1,...,v_m\\) is
+a list of vectors in \\(V\\). For \\(k \in \\{1,...,m\\}\\),
+let
+\\[
+w_k=v_1+...+v_k
+\\]
+
+Show that the list \\(v_1,...,v_m\\) is linearly independent
+if and only if the list \\(w_1,...,w_m\\) is linearly independent.
+
+**Solution:**
+
+If \\(m = 1\\) then \\(w_1 = v_1\\) and the problem is trivial.
+Consider \\(m > 1\\).
+
+Suppose \\(w_1,...,w_m\\) is linearly independent, let
+\\(a_1,...,a_m \in F\\) be such that:
+\\[
+0 = a_1v_1 + ... + a_mv_m
+\\]
+
+Replace \\(v_i\\) with \\(w_i\\) using
+\\(v_1 = w_1\\), \\(v_k = w_k - w_{k-1}\\):
+
+\\[
+\begin{aligned}
+0 &= a_1v_1 + ... + a_mv_m\\\\
+&= a_1w_1 + a_2(w_2 - w_1) + ... + a_m(w_m - w_{m-1})\\\\
+&= (a_1 - a_2)w_1 + ... + (a_{m-1} - a_m)w_{m-1} + a_mw_m\\\\
+\end{aligned}
+\\]
+
+Because \\(w_1,...,w_m\\) is linearly independent, the coefficients must be zero:
+\\[
+\begin{aligned}
+&\begin{cases}
+a_1 - a_2 = 0 \\\\
+... \\\\
+a_{m-1} - a_m = 0 \\\\
+a_m = 0
+\end{cases}
+\implies &a_1 = ... = a_m = 0
+\end{aligned}
+\\]
+
+So \\(v_1,...,v_m\\) is linearly independent.
+
+Suppose \\(v_1,...,v_m\\) is linearly independent, let
+\\(a_1,...,a_m \in F\\) be such that:
+\\[
+\begin{aligned}
+0 &= a_1w_1 + a_2w_2 +... + a_mw_m \\\\
+&= a_1v_1 + a_2(v_1 + v_2) + ... +a_m(v_1 + ... + v_m) \\\\
+&= (a_1+a_2+...+a_m)v_1 + (a_2 + ... +a_m)v_2 + ... +a_mv_m
+\end{aligned}
+\\]
+
+Because \\(v_1,...,v_m\\) is linearly independent, the coefficients must be zero:
+\\[
+\begin{aligned}
+&\begin{cases}
+a_m = 0 \\\\
+a_{m-1} + a_m = 0 \\\\
+... \\\\
+a_1 + ... + a_m = 0
+\end{cases}
+\implies &a_1 = ... = a_m = 0
+\end{aligned}
+\\]
+
+So \\(w_1,...,w_m\\) is linearly independent \\(\blacksquare\\).
