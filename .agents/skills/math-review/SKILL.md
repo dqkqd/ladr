@@ -7,7 +7,8 @@ edge cases, and style. Use when asked to check, review, or verify a proof, solut
 # Reviewing math solutions
 
 Check submitted proofs against these items. Report the flaw and the missing
-reason; do not rewrite the proof or supply a corrected one.
+reason; do not rewrite the proof or supply a corrected one. Cite every finding
+as `path:line` (or a line range) so the author can jump straight to it.
 
 ## Structure
 
