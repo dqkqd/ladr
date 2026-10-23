@@ -253,3 +253,37 @@ x(2,3,1) + y(1,-1,2) + z(7,3,c) = 0\\\\
    \\]
 
    So \\(1 + i, 1 - i\\) is linearly dependent \\(\blacksquare\\).
+
+## Exercise 8
+
+Suppose \\(v_1,v_2,v_3,v_4\\) is linearly independent in \\(V\\). Prove
+that the list
+\\[
+v_1 - v_2, v_2 - v_3,v_3 - v_4,v_4
+\\]
+is also linearly independent.
+
+**Solution:**
+
+Let \\(a_1,a_2,a_3,a_4 \in F\\) be such that:
+\\[
+\begin{aligned}
+0 &= a_1(v_1 - v_2) + a_2(v_2 - v_3) + a_3(v_3 - v_4) + a_4v_4 \\\\
+&= a_1v_1 + (a_2 - a_1)v_2 + (a_3 - a_2)v_3 + (a_4 - a_3)v_4
+\end{aligned}
+\\]
+
+Because \\(v_1,v_2,v_3,v_4\\) is linearly independent:
+\\[
+\begin{aligned}
+&\begin{cases}
+a_1 = 0 \\\\
+a_2 - a_1 = 0 \\\\
+a_3 - a_2 = 0 \\\\
+a_4 - a_3 = 0
+\end{cases} \\\\
+\implies &a_1 = a_2 = a_3 = a_4 = 0
+\end{aligned}
+\\]
+
+So \\(v_1 - v_2,v_2 - v_3,v_3 - v_4,v_4\\) is linearly independent \\(\blacksquare\\).
