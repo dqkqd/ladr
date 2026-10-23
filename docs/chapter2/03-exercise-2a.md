@@ -397,3 +397,56 @@ So \\((a_1+...+a_m) \neq 0\\), and we can represent \\(w\\) as:
 w = -\frac{a_1}{a_1+...+a_m}v_1 - ... -\frac{a_m}{a_1+...+a_m}v_m
 \implies w \in \text{span}(v_1,...,v_m)
 \\]
+
+## Exercise 13
+
+Suppose \\(v_1,...,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
+Show that
+
+\\[
+v_1,...,v_m,w \text{ is linearly independent } \iff
+w \notin \text{span}(v_1,...,v_m)
+\\]
+
+**Solution:**
+
+Suppose \\(v_1,...,v_m,w\\) is a linearly independent list.
+If \\(w \in \text{span}(v_1,...,v_m)\\), then there exist \\(a_1,...,a_m \in F\\):
+\\[
+w = a_1v_1+...+a_mv_m
+\implies a_1v_1+...+a_mv_m + (-1)w = 0
+\\]
+
+So \\(v_1,...,v_m,w\\) is linearly dependent, which is a contradiction,
+thus \\(w \notin \text{span}(v_1,...,v_m)\\).
+
+Suppose \\(w \notin \text{span}(v_1,...,v_m)\\).
+If \\(v_1,...,v_m,w\\) is linearly dependent, then there exist
+\\(a_1,...,a_m,a_w \in F\\), not all zero, such that
+\\[
+a_1v_1+...+a_mv_m+a_ww = 0
+\implies -a_ww = a_1v_1+...+a_mv_m
+\\]
+
+There are three cases:
+
+- \\(w = 0\\): This cannot happen
+  because \\(0 \in \text{span}(v_1,...,v_m)\\) and
+  \\(w \notin \text{span}(v_1,...,v_m)\\)
+- \\(a_w = 0\\): This implies \\(a_1v_1+...+a_mv_m = 0\\). Because \\(v_1,...,v_m\\)
+  is linearly independent, \\(a_1 = ... = a_m = 0\\), contradicting the
+  assumption that \\(a_1,...,a_m,a_w\\) is not all zero
+- \\(w \neq 0\\) and \\(a_w \neq 0\\): we have
+  \\[
+  w = -\frac{a_1}{a_w}v_1-...-\frac{a_m}{a_w}v_m
+  \implies w \in \text{span}(v_1,...,v_m)
+  \\]
+  which is a contradiction.
+
+So
+
+\\[
+v_1,...,v_m,w \text{ is linearly independent } \iff
+w \notin \text{span}(v_1,...,v_m)
+\\]
+\\(\blacksquare\\).
