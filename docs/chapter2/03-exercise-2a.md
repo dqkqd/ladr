@@ -321,3 +321,31 @@ a_3 = ... = a_m = 0
 \\]
 
 So \\(5v_1-4v_2,v_2,v_3,...,v_m\\) is linearly independent \\(\blacksquare\\).
+
+## Exercise 10
+
+Prove or give a counterexample: If \\(v_1,v_2,...,v_m\\) is a linearly independent
+list of vectors in \\(V\\) and \\(\lambda \in F\\) with \\(\lambda \neq 0\\),
+then \\(\lambda v_1,\lambda v_2,...,\lambda v_m\\) is linearly independent.
+
+**Solution:**
+
+Let \\(a_1,a_2,...,a_m \in F\\) be such that:
+\\[
+\begin{aligned}
+0 &= a_1(\lambda v_1) + a_2(\lambda v_2) + ... + a_m(\lambda v_m) \\\\
+&= (a_1\lambda)v_1 + (a_2\lambda)v_2 + ... + (a_m\lambda)v_m
+\end{aligned}
+\\]
+
+Because \\(v_1,v_2,...,v_m\\) is linearly independent:
+\\[
+a_1\lambda = a_2\lambda = ... = a_m\lambda = 0
+\\]
+
+Because \\(\lambda \neq 0\\), we must have:
+\\[
+a_1 = a_2 = ... = a_m = 0
+\\]
+
+So \\(\lambda v_1,\lambda v_2,...,\lambda v_m\\) is linearly independent \\(\blacksquare\\).
