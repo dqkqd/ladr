@@ -1,5 +1,5 @@
 watch:
-  mdbook serve --open
+  mdbook serve
 
 test:
   cargo test
