@@ -349,3 +349,25 @@ a_1 = a_2 = ... = a_m = 0
 \\]
 
 So \\(\lambda v_1,\lambda v_2,...,\lambda v_m\\) is linearly independent \\(\blacksquare\\).
+
+## Exercise 11
+
+Prove or give a counterexample: If \\(v_1,...,v_m\\) and \\(w_1,...,w_m\\)
+are linearly independent lists of vectors in \\(V\\), then the list
+\\(v_1 + w_1, ...,v_m + w_m\\) is linearly independent.
+
+**Solution:**
+
+We give a counterexample.
+
+Let \\(v_1,...,v_m\\) be a linearly independent list in \\(V\\).
+Take \\(w_1,...,w_m\\) such that \\(w_i = -v_i\\), from
+[Exercise 10](#exercise-10) \\(w_1,...,w_m = -v_1,...,-v_m\\) is linearly independent.
+
+However, their sum
+\\[
+v_1+w_1,...,v_m+w_m=v_1+(-v_1),...,v_m+(-v_m)=0,...,0
+\\]
+is linearly dependent because there exist coefficients
+with 1 in the first position and 0 elsewhere
+such that \\(1\times0 + 0\times0 + ... + 0\times0 = 0\\) \\(\blacksquare\\).
