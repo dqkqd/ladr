@@ -287,3 +287,37 @@ a_4 - a_3 = 0
 \\]
 
 So \\(v_1 - v_2,v_2 - v_3,v_3 - v_4,v_4\\) is linearly independent \\(\blacksquare\\).
+
+## Exercise 9
+
+Prove or give a counterexample: If \\(v_1,v_2,...,v_m\\) is a linearly independent
+list of vectors in \\(V\\), then
+\\[
+5v_1-4v_2,v_2,v_3,...,v_m
+\\]
+is linearly independent.
+
+**Solution:**
+
+Similar to [Exercise 8](#exercise-8),
+let \\(a_1,a_2,...,a_m \in F\\) be such that:
+\\[
+\begin{aligned}
+0 &= a_1(5v_1 - 4v_2) + a_2v_2 + a_3v_3 + ... + a_mv_m \\\\
+&= 5a_1v_1 + (a_2-4a_1)v_2 + a_3v_3 + ... + a_mv_m
+\end{aligned}
+\\]
+
+Because \\(v_1,v_2,...,v_m\\) is linearly independent:
+\\[
+\begin{aligned}
+&\begin{cases}
+5a_1 = 0 \\\\
+a_2 - 4a_1 = 0 \\\\
+a_3 = ... = a_m = 0
+\end{cases} \\\\
+\implies &a_1 = a_2 = a_3 = ... = a_m = 0
+\end{aligned}
+\\]
+
+So \\(5v_1-4v_2,v_2,v_3,...,v_m\\) is linearly independent \\(\blacksquare\\).
