@@ -53,55 +53,55 @@ So \\(v_1-v_2,v_2-v_3,v_3-v_4,v_4\\) also spans \\(V\\) \\(\blacksquare\\).
 
 ## Exercise 3
 
-Suppose \\(v_1,...,v_m\\) is a list of vectors in \\(V\\). For
-\\(k \in \\{1,...,m\\}\\), let
+Suppose \\(v_1,\dots,v_m\\) is a list of vectors in \\(V\\). For
+\\(k \in \\{1,\dots,m\\}\\), let
 
 \\[
-w_k = v_1 + ... + v_k
+w_k = v_1 + \dots + v_k
 \\]
 
-Show that \\(\text{span}(v_1,...,v_m)=\text{span}(w_1,...,w_m)\\).
+Show that \\(\text{span}(v_1,\dots,v_m)=\text{span}(w_1,\dots,w_m)\\).
 
 **Solution:**
 
-For all \\(w \in \text{span}(w_1,...,w_m)\\), there are \\(a_1,...,a_m \in F\\):
+For all \\(w \in \text{span}(w_1,\dots,w_m)\\), there are \\(a_1,\dots,a_m \in F\\):
 
 \\[
 \begin{aligned}
 w
-&= a_1w_1 + a_2w_2 + ... + a_mw_m\\\\
-&= a_1v_1 + a_2(v_1 + v_2) + ... + a_m(v_1 + ... + v_m)\\\\
-&= (a_1 + ... + a_m)v_1 + (a_2 + ... + a_m)v_2 + ... +
-(a_k + ... + a_m)v_k + ... + a_mv_m
+&= a_1w_1 + a_2w_2 + \dots + a_mw_m\\\\
+&= a_1v_1 + a_2(v_1 + v_2) + \dots + a_m(v_1 + \dots + v_m)\\\\
+&= (a_1 + \dots + a_m)v_1 + (a_2 + \dots + a_m)v_2 + \dots +
+(a_k + \dots + a_m)v_k + \dots + a_mv_m
 \end{aligned}
 \\]
 
-So \\(\text{span}(w_1,...,w_m) \subseteq \text{span}(v_1,...,v_m)\\)
+So \\(\text{span}(w_1,\dots,w_m) \subseteq \text{span}(v_1,\dots,v_m)\\)
 
 Moreover, we have
 \\[
 \begin{aligned}
 v_1 &= w_1 \\\\
 v_2 &= w_2 - w_1 \\\\
-&... \\\\
+&\vdots \\\\
 v_k &= w_k - w_{k-1}
 \end{aligned}
 \\]
 
-So for all \\(v \in \text{span}(v_1,...,v_m)\\), there are \\(a_1,...,a_m \in F\\):
+So for all \\(v \in \text{span}(v_1,\dots,v_m)\\), there are \\(a_1,\dots,a_m \in F\\):
 
 \\[
 \begin{aligned}
 v
-&= a_1v_1 + ... + a_mv_m\\\\
-&= a_1w_1 + a_2(w_2 - w_1) + ... + a_m(w_m - w_{m-1})\\\\
-&= (a_1 - a_2)w_1 + (a_2 - a_3)w_2 + ... + (a_{m-1} - a_m)w_{m-1} + a_mw_m\\\\
+&= a_1v_1 + \dots + a_mv_m\\\\
+&= a_1w_1 + a_2(w_2 - w_1) + \dots + a_m(w_m - w_{m-1})\\\\
+&= (a_1 - a_2)w_1 + (a_2 - a_3)w_2 + \dots + (a_{m-1} - a_m)w_{m-1} + a_mw_m\\\\
 \end{aligned}
 \\]
 
-So \\(\text{span}(v_1,...,v_m) \subseteq \text{span}(w_1,...,w_m)\\).
+So \\(\text{span}(v_1,\dots,v_m) \subseteq \text{span}(w_1,\dots,w_m)\\).
 
-Therefore \\(\text{span}(v_1,...,v_m)=\text{span}(w_1,...,w_m)\\) \\(\blacksquare\\).
+Therefore \\(\text{span}(v_1,\dots,v_m)=\text{span}(w_1,\dots,w_m)\\) \\(\blacksquare\\).
 
 ## Exercise 4
 
@@ -290,188 +290,188 @@ So \\(v_1 - v_2,v_2 - v_3,v_3 - v_4,v_4\\) is linearly independent \\(\blacksqua
 
 ## Exercise 9
 
-Prove or give a counterexample: If \\(v_1,v_2,...,v_m\\) is a linearly independent
+Prove or give a counterexample: If \\(v_1,v_2,\dots,v_m\\) is a linearly independent
 list of vectors in \\(V\\), then
 \\[
-5v_1-4v_2,v_2,v_3,...,v_m
+5v_1-4v_2,v_2,v_3,\dots,v_m
 \\]
 is linearly independent.
 
 **Solution:**
 
 Similar to [Exercise 8](#exercise-8),
-let \\(a_1,a_2,...,a_m \in F\\) be such that:
+let \\(a_1,a_2,\dots,a_m \in F\\) be such that:
 \\[
 \begin{aligned}
-0 &= a_1(5v_1 - 4v_2) + a_2v_2 + a_3v_3 + ... + a_mv_m \\\\
-&= 5a_1v_1 + (a_2-4a_1)v_2 + a_3v_3 + ... + a_mv_m
+0 &= a_1(5v_1 - 4v_2) + a_2v_2 + a_3v_3 + \dots + a_mv_m \\\\
+&= 5a_1v_1 + (a_2-4a_1)v_2 + a_3v_3 + \dots + a_mv_m
 \end{aligned}
 \\]
 
-Because \\(v_1,v_2,...,v_m\\) is linearly independent:
+Because \\(v_1,v_2,\dots,v_m\\) is linearly independent:
 \\[
 \begin{aligned}
 &\begin{cases}
 5a_1 = 0 \\\\
 a_2 - 4a_1 = 0 \\\\
-a_3 = ... = a_m = 0
+a_3 = \dots = a_m = 0
 \end{cases} \\\\
-\implies &a_1 = a_2 = a_3 = ... = a_m = 0
+\implies &a_1 = a_2 = a_3 = \dots = a_m = 0
 \end{aligned}
 \\]
 
-So \\(5v_1-4v_2,v_2,v_3,...,v_m\\) is linearly independent \\(\blacksquare\\).
+So \\(5v_1-4v_2,v_2,v_3,\dots,v_m\\) is linearly independent \\(\blacksquare\\).
 
 ## Exercise 10
 
-Prove or give a counterexample: If \\(v_1,v_2,...,v_m\\) is a linearly independent
+Prove or give a counterexample: If \\(v_1,v_2,\dots,v_m\\) is a linearly independent
 list of vectors in \\(V\\) and \\(\lambda \in F\\) with \\(\lambda \neq 0\\),
-then \\(\lambda v_1,\lambda v_2,...,\lambda v_m\\) is linearly independent.
+then \\(\lambda v_1,\lambda v_2,\dots,\lambda v_m\\) is linearly independent.
 
 **Solution:**
 
-Let \\(a_1,a_2,...,a_m \in F\\) be such that:
+Let \\(a_1,a_2,\dots,a_m \in F\\) be such that:
 \\[
 \begin{aligned}
-0 &= a_1(\lambda v_1) + a_2(\lambda v_2) + ... + a_m(\lambda v_m) \\\\
-&= (a_1\lambda)v_1 + (a_2\lambda)v_2 + ... + (a_m\lambda)v_m
+0 &= a_1(\lambda v_1) + a_2(\lambda v_2) + \dots + a_m(\lambda v_m) \\\\
+&= (a_1\lambda)v_1 + (a_2\lambda)v_2 + \dots + (a_m\lambda)v_m
 \end{aligned}
 \\]
 
-Because \\(v_1,v_2,...,v_m\\) is linearly independent:
+Because \\(v_1,v_2,\dots,v_m\\) is linearly independent:
 \\[
-a_1\lambda = a_2\lambda = ... = a_m\lambda = 0
+a_1\lambda = a_2\lambda = \dots = a_m\lambda = 0
 \\]
 
 Because \\(\lambda \neq 0\\), we must have:
 \\[
-a_1 = a_2 = ... = a_m = 0
+a_1 = a_2 = \dots = a_m = 0
 \\]
 
-So \\(\lambda v_1,\lambda v_2,...,\lambda v_m\\) is linearly independent \\(\blacksquare\\).
+So \\(\lambda v_1,\lambda v_2,\dots,\lambda v_m\\) is linearly independent \\(\blacksquare\\).
 
 ## Exercise 11
 
-Prove or give a counterexample: If \\(v_1,...,v_m\\) and \\(w_1,...,w_m\\)
+Prove or give a counterexample: If \\(v_1,\dots,v_m\\) and \\(w_1,\dots,w_m\\)
 are linearly independent lists of vectors in \\(V\\), then the list
-\\(v_1 + w_1, ...,v_m + w_m\\) is linearly independent.
+\\(v_1 + w_1, \dots,v_m + w_m\\) is linearly independent.
 
 **Solution:**
 
 We give a counterexample.
 
-Let \\(v_1,...,v_m\\) be a linearly independent list in \\(V\\).
-Take \\(w_1,...,w_m\\) such that \\(w_i = -v_i\\), from
-[Exercise 10](#exercise-10) \\(w_1,...,w_m = -v_1,...,-v_m\\) is linearly independent.
+Let \\(v_1,\dots,v_m\\) be a linearly independent list in \\(V\\).
+Take \\(w_1,\dots,w_m\\) such that \\(w_i = -v_i\\), from
+[Exercise 10](#exercise-10) \\(w_1,\dots,w_m = -v_1,\dots,-v_m\\) is linearly independent.
 
 However, their sum
 \\[
-v_1+w_1,...,v_m+w_m=v_1+(-v_1),...,v_m+(-v_m)=0,...,0
+v_1+w_1,\dots,v_m+w_m=v_1+(-v_1),\dots,v_m+(-v_m)=0,\dots,0
 \\]
 is linearly dependent because there exist coefficients
 with 1 in the first position and 0 elsewhere
-such that \\(1\times0 + 0\times0 + ... + 0\times0 = 0\\) \\(\blacksquare\\).
+such that \\(1\times0 + 0\times0 + \dots + 0\times0 = 0\\) \\(\blacksquare\\).
 
 ## Exercise 12
 
-Suppose \\(v_1,...,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
-Prove that if \\(v_1+w,...,v_m+w\\) is linearly dependent,
+Suppose \\(v_1,\dots,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
+Prove that if \\(v_1+w,\dots,v_m+w\\) is linearly dependent,
 then \\(w \in \text{span}(v_1,..,v_m)\\).
 
 **Solution:**
 
-Because \\(v_1+w,...,v_m+w\\) is linearly dependent, there exist
-\\(a_1,...,a_m\\) not all zero such that:
+Because \\(v_1+w,\dots,v_m+w\\) is linearly dependent, there exist
+\\(a_1,\dots,a_m\\) not all zero such that:
 \\[
 \begin{aligned}
-0 &= a_1(v_1+w)+...+a_m(v_m+w) \\\\
-&= a_1v_1+ ... + a_mv_m + (a_1+...+a_m)w \\\\
+0 &= a_1(v_1+w)+\dots+a_m(v_m+w) \\\\
+&= a_1v_1+ \dots + a_mv_m + (a_1+\dots+a_m)w \\\\
 \implies
-&-(a_1+...+a_m)w = a_1v_1+ ... + a_mv_m
+&-(a_1+\dots+a_m)w = a_1v_1+ \dots + a_mv_m
 \end{aligned}
 \\]
 
-Because \\(v_1,...,v_m\\) is linearly independent, \\(a_1v_1+...+a_mv_m \neq 0\\).
-So \\((a_1+...+a_m) \neq 0\\), and we can represent \\(w\\) as:
+Because \\(v_1,\dots,v_m\\) is linearly independent, \\(a_1v_1+\dots+a_mv_m \neq 0\\).
+So \\((a_1+\dots+a_m) \neq 0\\), and we can represent \\(w\\) as:
 \\[
-w = -\frac{a_1}{a_1+...+a_m}v_1 - ... -\frac{a_m}{a_1+...+a_m}v_m
-\implies w \in \text{span}(v_1,...,v_m)
+w = -\frac{a_1}{a_1+\dots+a_m}v_1 - \dots -\frac{a_m}{a_1+\dots+a_m}v_m
+\implies w \in \text{span}(v_1,\dots,v_m)
 \\]
 
 ## Exercise 13
 
-Suppose \\(v_1,...,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
+Suppose \\(v_1,\dots,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
 Show that
 
 \\[
-v_1,...,v_m,w \text{ is linearly independent } \iff
-w \notin \text{span}(v_1,...,v_m)
+v_1,\dots,v_m,w \text{ is linearly independent } \iff
+w \notin \text{span}(v_1,\dots,v_m)
 \\]
 
 **Solution:**
 
-Suppose \\(v_1,...,v_m,w\\) is a linearly independent list.
-If \\(w \in \text{span}(v_1,...,v_m)\\), then there exist \\(a_1,...,a_m \in F\\):
+Suppose \\(v_1,\dots,v_m,w\\) is a linearly independent list.
+If \\(w \in \text{span}(v_1,\dots,v_m)\\), then there exist \\(a_1,\dots,a_m \in F\\):
 \\[
-w = a_1v_1+...+a_mv_m
-\implies a_1v_1+...+a_mv_m + (-1)w = 0
+w = a_1v_1+\dots+a_mv_m
+\implies a_1v_1+\dots+a_mv_m + (-1)w = 0
 \\]
 
-So \\(v_1,...,v_m,w\\) is linearly dependent, which is a contradiction,
-thus \\(w \notin \text{span}(v_1,...,v_m)\\).
+So \\(v_1,\dots,v_m,w\\) is linearly dependent, which is a contradiction,
+thus \\(w \notin \text{span}(v_1,\dots,v_m)\\).
 
-Suppose \\(w \notin \text{span}(v_1,...,v_m)\\).
-If \\(v_1,...,v_m,w\\) is linearly dependent, then there exist
-\\(a_1,...,a_m,a_w \in F\\), not all zero, such that
+Suppose \\(w \notin \text{span}(v_1,\dots,v_m)\\).
+If \\(v_1,\dots,v_m,w\\) is linearly dependent, then there exist
+\\(a_1,\dots,a_m,a_w \in F\\), not all zero, such that
 \\[
-a_1v_1+...+a_mv_m+a_ww = 0
-\implies -a_ww = a_1v_1+...+a_mv_m
+a_1v_1+\dots+a_mv_m+a_ww = 0
+\implies -a_ww = a_1v_1+\dots+a_mv_m
 \\]
 
 There are three cases:
 
 - \\(w = 0\\): This cannot happen
-  because \\(0 \in \text{span}(v_1,...,v_m)\\) and
-  \\(w \notin \text{span}(v_1,...,v_m)\\)
-- \\(a_w = 0\\): This implies \\(a_1v_1+...+a_mv_m = 0\\). Because \\(v_1,...,v_m\\)
-  is linearly independent, \\(a_1 = ... = a_m = 0\\), contradicting the
-  assumption that \\(a_1,...,a_m,a_w\\) is not all zero
+  because \\(0 \in \text{span}(v_1,\dots,v_m)\\) and
+  \\(w \notin \text{span}(v_1,\dots,v_m)\\)
+- \\(a_w = 0\\): This implies \\(a_1v_1+\dots+a_mv_m = 0\\). Because \\(v_1,\dots,v_m\\)
+  is linearly independent, \\(a_1 = \dots = a_m = 0\\), contradicting the
+  assumption that \\(a_1,\dots,a_m,a_w\\) is not all zero
 - \\(w \neq 0\\) and \\(a_w \neq 0\\): we have
   \\[
-  w = -\frac{a_1}{a_w}v_1-...-\frac{a_m}{a_w}v_m
-  \implies w \in \text{span}(v_1,...,v_m)
+  w = -\frac{a_1}{a_w}v_1-\dots-\frac{a_m}{a_w}v_m
+  \implies w \in \text{span}(v_1,\dots,v_m)
   \\]
   which is a contradiction.
 
 So
 
 \\[
-v_1,...,v_m,w \text{ is linearly independent } \iff
-w \notin \text{span}(v_1,...,v_m)
+v_1,\dots,v_m,w \text{ is linearly independent } \iff
+w \notin \text{span}(v_1,\dots,v_m)
 \\]
 \\(\blacksquare\\).
 
 ## Exercise 14
 
-Suppose \\(v_1,...,v_m\\) is
-a list of vectors in \\(V\\). For \\(k \in \\{1,...,m\\}\\),
+Suppose \\(v_1,\dots,v_m\\) is
+a list of vectors in \\(V\\). For \\(k \in \\{1,\dots,m\\}\\),
 let
 \\[
-w_k=v_1+...+v_k
+w_k=v_1+\dots+v_k
 \\]
 
-Show that the list \\(v_1,...,v_m\\) is linearly independent
-if and only if the list \\(w_1,...,w_m\\) is linearly independent.
+Show that the list \\(v_1,\dots,v_m\\) is linearly independent
+if and only if the list \\(w_1,\dots,w_m\\) is linearly independent.
 
 **Solution:**
 
 If \\(m = 1\\) then \\(w_1 = v_1\\) and the problem is trivial.
 Consider \\(m > 1\\).
 
-Suppose \\(w_1,...,w_m\\) is linearly independent, let
-\\(a_1,...,a_m \in F\\) be such that:
+Suppose \\(w_1,\dots,w_m\\) is linearly independent, let
+\\(a_1,\dots,a_m \in F\\) be such that:
 \\[
-0 = a_1v_1 + ... + a_mv_m
+0 = a_1v_1 + \dots + a_mv_m
 \\]
 
 Replace \\(v_i\\) with \\(w_i\\) using
@@ -479,48 +479,48 @@ Replace \\(v_i\\) with \\(w_i\\) using
 
 \\[
 \begin{aligned}
-0 &= a_1v_1 + ... + a_mv_m\\\\
-&= a_1w_1 + a_2(w_2 - w_1) + ... + a_m(w_m - w_{m-1})\\\\
-&= (a_1 - a_2)w_1 + ... + (a_{m-1} - a_m)w_{m-1} + a_mw_m\\\\
+0 &= a_1v_1 + \dots + a_mv_m\\\\
+&= a_1w_1 + a_2(w_2 - w_1) + \dots + a_m(w_m - w_{m-1})\\\\
+&= (a_1 - a_2)w_1 + \dots + (a_{m-1} - a_m)w_{m-1} + a_mw_m\\\\
 \end{aligned}
 \\]
 
-Because \\(w_1,...,w_m\\) is linearly independent, the coefficients must be zero:
+Because \\(w_1,\dots,w_m\\) is linearly independent, the coefficients must be zero:
 \\[
 \begin{aligned}
 &\begin{cases}
 a_1 - a_2 = 0 \\\\
-... \\\\
+\vdots \\\\
 a_{m-1} - a_m = 0 \\\\
 a_m = 0
 \end{cases}
-\implies &a_1 = ... = a_m = 0
+\implies &a_1 = \dots = a_m = 0
 \end{aligned}
 \\]
 
-So \\(v_1,...,v_m\\) is linearly independent.
+So \\(v_1,\dots,v_m\\) is linearly independent.
 
-Suppose \\(v_1,...,v_m\\) is linearly independent, let
-\\(a_1,...,a_m \in F\\) be such that:
+Suppose \\(v_1,\dots,v_m\\) is linearly independent, let
+\\(a_1,\dots,a_m \in F\\) be such that:
 \\[
 \begin{aligned}
-0 &= a_1w_1 + a_2w_2 +... + a_mw_m \\\\
-&= a_1v_1 + a_2(v_1 + v_2) + ... +a_m(v_1 + ... + v_m) \\\\
-&= (a_1+a_2+...+a_m)v_1 + (a_2 + ... +a_m)v_2 + ... +a_mv_m
+0 &= a_1w_1 + a_2w_2 +\dots + a_mw_m \\\\
+&= a_1v_1 + a_2(v_1 + v_2) + \dots +a_m(v_1 + \dots + v_m) \\\\
+&= (a_1+a_2+\dots+a_m)v_1 + (a_2 + \dots +a_m)v_2 + \dots +a_mv_m
 \end{aligned}
 \\]
 
-Because \\(v_1,...,v_m\\) is linearly independent, the coefficients must be zero:
+Because \\(v_1,\dots,v_m\\) is linearly independent, the coefficients must be zero:
 \\[
 \begin{aligned}
 &\begin{cases}
 a_m = 0 \\\\
 a_{m-1} + a_m = 0 \\\\
-... \\\\
-a_1 + ... + a_m = 0
+\vdots \\\\
+a_1 + \dots + a_m = 0
 \end{cases}
-\implies &a_1 = ... = a_m = 0
+\implies &a_1 = \dots = a_m = 0
 \end{aligned}
 \\]
 
-So \\(w_1,...,w_m\\) is linearly independent \\(\blacksquare\\).
+So \\(w_1,\dots,w_m\\) is linearly independent \\(\blacksquare\\).

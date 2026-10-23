@@ -19,7 +19,7 @@ println!("{}", list);
 The definition for addition is
 
 \\[
-(x_1,x_2,...,x_n)+(y_1,y_2,...,y_n) =(x_1+y_1,x_2+y_2,...,x_n+y_n)
+(x_1,x_2,\dots,x_n)+(y_1,y_2,\dots,y_n) =(x_1+y_1,x_2+y_2,\dots,x_n+y_n)
 \\]
 
 ```rust
@@ -36,7 +36,7 @@ println!("{} + {} = {}", lhs, rhs, lhs + rhs);
 A list \\( 0 \\) is a list of \\( n \\) zero elements.
 
 \\[
-0 =(0,0,...,0)
+0 =(0,0,\dots,0)
 \\]
 
 ```rust
@@ -72,8 +72,8 @@ println!("{} + {} = {}", list, -list, list + (-list));
 Multiply a list with a scalar is defined by multiplying each element with the scalar.
 
 \\[
-\lambda (x_1,x_2,...,x_n) = (\lambda x_1, \lambda x_2, \lambda x_n)\quad
-\forall \lambda \in \mathbb{F}, (x_1,x_2,...,x_n) \in \mathbb{F}^n
+\lambda (x_1,x_2,\dots,x_n) = (\lambda x_1, \lambda x_2, \lambda x_n)\quad
+\forall \lambda \in \mathbb{F}, (x_1,x_2,\dots,x_n) \in \mathbb{F}^n
 \\]
 
 ```rust

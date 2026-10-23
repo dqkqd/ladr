@@ -287,19 +287,19 @@ Show that
 \\[
 \begin{aligned}
 (x + y) + z
-&= ((x_1,...,x_n) + (y_1,...,y_n)) + (z_1,...,z_n) \\\\
-&= (x_1 + y_1,...,x_n+y_n) + (z_1,...,z_n) \\\\
-&= ((x_1 + y_1) + z_1,...,(x_n+y_n)+z_n) \\\\
-&= (x_1 + (y_1 + z_1),...,x_n+(y_n+z_n))
+&= ((x_1,\dots,x_n) + (y_1,\dots,y_n)) + (z_1,\dots,z_n) \\\\
+&= (x_1 + y_1,\dots,x_n+y_n) + (z_1,\dots,z_n) \\\\
+&= ((x_1 + y_1) + z_1,\dots,(x_n+y_n)+z_n) \\\\
+&= (x_1 + (y_1 + z_1),\dots,x_n+(y_n+z_n))
 \end{aligned}
 \\]
 
 Because \\( (a + b) + c = a + (b + c), \quad \forall a,b,c \in \mathbb{F} \\):
 \\[
 \begin{aligned}
-&(x_1 + (y_1 + z_1),...,x_n+(y_n+z_n)) \\\\
-&= (x_1,...,x_n) + (y_1 + z_1,...,y_n+z_n) \\\\
-&= (x_1,...,x_n) + ((y_1,...,y_n) + (z_1,...,z_n)) \\\\
+&(x_1 + (y_1 + z_1),\dots,x_n+(y_n+z_n)) \\\\
+&= (x_1,\dots,x_n) + (y_1 + z_1,\dots,y_n+z_n) \\\\
+&= (x_1,\dots,x_n) + ((y_1,\dots,y_n) + (z_1,\dots,z_n)) \\\\
 &= x + (y+z)
 \end{aligned}
 \\]
@@ -317,8 +317,8 @@ Show that
 \\[
 \begin{aligned}
 (ab)x
-&= (ab)(x_1,...,x_n) \\\\
-&= ((ab)x_1,...,(ab)x_n)
+&= (ab)(x_1,\dots,x_n) \\\\
+&= ((ab)x_1,\dots,(ab)x_n)
 \end{aligned}
 \\]
 
@@ -326,9 +326,9 @@ Because \\( (ab)c = a(bc), \quad \forall a,b,c \in \mathbb{F} \\):
 
 \\[
 \begin{aligned}
-&((ab)x_1,...,(ab)x_n) \\\\
-&= (a(bx_1),...,a(bx_n)) \\\\
-&= a(bx_1,...,bx_n) \\\\
+&((ab)x_1,\dots,(ab)x_n) \\\\
+&= (a(bx_1),\dots,a(bx_n)) \\\\
+&= a(bx_1,\dots,bx_n) \\\\
 &= a(bx)
 \end{aligned}
 \\]
@@ -346,8 +346,8 @@ Show that
 \\[
 \begin{aligned}
 1x
-&= 1(x_1,...,x_n) \\\\
-&= (1x_1,...,1x_n)
+&= 1(x_1,\dots,x_n) \\\\
+&= (1x_1,\dots,1x_n)
 \end{aligned}
 \\]
 
@@ -355,8 +355,8 @@ Because \\( 1a = a, \quad \forall a \in \mathbb{F} \\):
 
 \\[
 \begin{aligned}
-&(1x_1,...,1x_n) \\\\
-&= (x_1,...,x_n) \\\\
+&(1x_1,\dots,1x_n) \\\\
+&= (x_1,\dots,x_n) \\\\
 &= x
 \end{aligned}
 \\]
@@ -375,9 +375,9 @@ Show that
 \\[
 \begin{aligned}
 \lambda (x + y)
-&= \lambda ((x_1,...,x_n) + (y_1,...,y_n)) \\\\
-&= \lambda (x_1 + y_1,...,x_n+y_n) \\\\
-&= (\lambda(x_1 + y_1),...,\lambda(x_n+y_n)) \\\\
+&= \lambda ((x_1,\dots,x_n) + (y_1,\dots,y_n)) \\\\
+&= \lambda (x_1 + y_1,\dots,x_n+y_n) \\\\
+&= (\lambda(x_1 + y_1),\dots,\lambda(x_n+y_n)) \\\\
 \end{aligned}
 \\]
 
@@ -386,8 +386,8 @@ Because \\(\lambda(a + b) = \lambda a + \lambda b
 
 \\[
 \begin{aligned}
-&(\lambda(x_1 + y_1),...,\lambda(x_n+y_n)) \\\\
-&=(\lambda x_1 + \lambda y_1),...,\lambda x_n + \lambda y_n) \\\\
+&(\lambda(x_1 + y_1),\dots,\lambda(x_n+y_n)) \\\\
+&=(\lambda x_1 + \lambda y_1),\dots,\lambda x_n + \lambda y_n) \\\\
 &=\lambda x + \lambda y
 \end{aligned}
 \\]
@@ -406,8 +406,8 @@ Show that
 \\[
 \begin{aligned}
 (a + b)x
-&= (a + b)(x_1,...,x_n) \\\\
-&= ((a + b)x_1,...,(a + b)x_n)
+&= (a + b)(x_1,\dots,x_n) \\\\
+&= ((a + b)x_1,\dots,(a + b)x_n)
 \end{aligned}
 \\]
 
@@ -416,10 +416,10 @@ Because \\((a + b)c = ac + bc
 
 \\[
 \begin{aligned}
-&((a + b)x_1,...,(a + b)x_n) \\\\
-&= (ax_1 + bx_1,...,ax_n + bx_n) \\\\
-&= (ax_1,...,ax_n) + (bx_1,...,bx_n) \\\\
-&= a(x_1,...,x_n) + b(x_1,...,x_n) \\\\
+&((a + b)x_1,\dots,(a + b)x_n) \\\\
+&= (ax_1 + bx_1,\dots,ax_n + bx_n) \\\\
+&= (ax_1,\dots,ax_n) + (bx_1,\dots,bx_n) \\\\
+&= a(x_1,\dots,x_n) + b(x_1,\dots,x_n) \\\\
 &= ax + bx \\\\
 \end{aligned}
 \\]
