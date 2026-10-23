@@ -523,4 +523,29 @@ a_1 + \dots + a_m = 0
 \end{aligned}
 \\]
 
-So \\(w_1,\dots,w_m\\) is linearly independent \\(\blacksquare\\).
+So \\(w_1,\dots,w_m\\) is linearly independent
+\\(\blacksquare\\).
+
+## Exercise 15
+
+Explain why there does not exist a list of six polynomials that is linearly
+independent in \\(\mathcal{P}_4(F)\\).
+
+**Solution:**
+
+Define \\(p_0 = 1, p_1 = z, p_2 = z^2, p_3 = z^3, p_4 = z^4\\).
+
+Let \\(p(z) = a_0 + a_1z + a_2z^2 + a_3z^3 + a_4z^4\\)
+be a polynomial in \\(\mathcal{P}_4(F)\\). Then:
+
+\\[
+p(z) = a_0p_0 + a_1p_1 + a_2p_2 + a_3p_3 + a_4p_4
+\\]
+
+So \\(p_0,p_1,p_2,p_3,p_4\\) (length 5) span \\(\mathcal{P}_4(F)\\).
+
+Because [length of a linearly independent list is at most the length
+of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list),
+there does not exist a list of six polynomials that is linearly
+independent in \\(\mathcal{P}_4(F)\\)
+\\(\blacksquare\\).
