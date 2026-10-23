@@ -371,3 +371,29 @@ v_1+w_1,...,v_m+w_m=v_1+(-v_1),...,v_m+(-v_m)=0,...,0
 is linearly dependent because there exist coefficients
 with 1 in the first position and 0 elsewhere
 such that \\(1\times0 + 0\times0 + ... + 0\times0 = 0\\) \\(\blacksquare\\).
+
+## Exercise 12
+
+Suppose \\(v_1,...,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
+Prove that if \\(v_1+w,...,v_m+w\\) is linearly dependent,
+then \\(w \in \text{span}(v_1,..,v_m)\\).
+
+**Solution:**
+
+Because \\(v_1+w,...,v_m+w\\) is linearly dependent, there exist
+\\(a_1,...,a_m\\) not all zero such that:
+\\[
+\begin{aligned}
+0 &= a_1(v_1+w)+...+a_m(v_m+w) \\\\
+&= a_1v_1+ ... + a_mv_m + (a_1+...+a_m)w \\\\
+\implies
+&-(a_1+...+a_m)w = a_1v_1+ ... + a_mv_m
+\end{aligned}
+\\]
+
+Because \\(v_1,...,v_m\\) is linearly independent, \\(a_1v_1+...+a_mv_m \neq 0\\).
+So \\((a_1+...+a_m) \neq 0\\), and we can represent \\(w\\) as:
+\\[
+w = -\frac{a_1}{a_1+...+a_m}v_1 - ... -\frac{a_m}{a_1+...+a_m}v_m
+\implies w \in \text{span}(v_1,...,v_m)
+\\]
