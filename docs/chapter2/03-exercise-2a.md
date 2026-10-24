@@ -661,3 +661,33 @@ a_m(0,\dots,\underbrace{1}_{m\text{-th position}},0,\dots) \\\\
 So the list \\(v_1,\dots,v_m\\) is linearly independent. By [Exercise
 17](#exercise-17), \\(F^\infty\\) is infinite-dimensional
 \\(\blacksquare\\).
+
+## Exercise 19
+
+Prove that the real vector space of all continuous real-valued functions on the
+interval \\([0,1]\\) is infinite-dimensional.
+
+**Solution:**
+
+Consider the functions \\(f_k: [0,1] \rightarrow R\\) such that \\(f_k(x) =
+x^k\\). Define an infinite sequence \\(f_0,f_1,f_2,\dots\\); that is,
+\\(1,x,x^2,\dots\\) with \\(x \in [0,1]\\).
+
+Let \\(m\\) be a positive integer, and let \\(a_0,\dots,a_{m-1}\\) be a list of
+coefficients such that:
+\\[
+\begin{aligned}
+&a_0f_0 + a_1f_1 + \dots + a_{m-1}f_{m-1} = 0 \\\\
+\iff
+&a_0 + a_1x + \dots + a_{m-1}x^{m-1} = 0 \quad \forall x \in [0,1] \\\\
+\end{aligned}
+\\]
+
+A nonzero polynomial has finitely many roots, but this one is \\(0\\) at
+every \\(x \in [0,1]\\); therefore is the zero polynomial, so \\(a_0 =
+\dots = a_{m-1} = 0\\).
+
+Therefore, \\(f_0,\dots,f_{m-1}\\) is linearly independent. By
+[Exercise 17](#exercise-17), the real vector space of continuous functions on
+\\([0,1]\\) is infinite-dimensional
+\\(\blacksquare\\).
