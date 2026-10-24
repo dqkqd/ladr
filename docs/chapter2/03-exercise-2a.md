@@ -549,3 +549,24 @@ of a spanning list](./02-linear-independence.md#length-of-linearly-independent-l
 there does not exist a list of six polynomials that is linearly
 independent in \\(\mathcal{P}_4(F)\\)
 \\(\blacksquare\\).
+
+## Exercise 16
+
+Explain why no list of four polynomials spans \\(\mathcal{P}_4(F)\\).
+
+**Solution:**
+
+Let \\(a_0,a_1,a_2,a_3,a_4 \in F\\) be such that
+\\[
+a_0 + a_1z + a_2z^2 + a_3z^3 + a_4z^4 = 0 = 0 + 0z + 0z^2 + 0z^3 + 0z^4
+\\]
+
+Therefore \\(a_0 = a_1 = a_2 = a_3 = a_4 = 0\\), which implies
+\\(1,z,z^2,z^3,z^4\\) is linearly independent.
+
+Because [length of a linearly independent list is at most the length
+of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list),
+every spanning list of \\(\mathcal{P}_4(F)\\) must have length at least 5.
+
+So there is no list of four polynomials that can span \\(\mathcal{P}_4(F)\\)
+\\(\blacksquare\\).
