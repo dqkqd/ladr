@@ -691,3 +691,59 @@ Therefore, \\(f_0,\dots,f_{m-1}\\) is linearly independent. By
 [Exercise 17](#exercise-17), the real vector space of continuous functions on
 \\([0,1]\\) is infinite-dimensional
 \\(\blacksquare\\).
+
+## Exercise 20
+
+Suppose \\(p_0,p_1,\dots,p_m\\) are polynomials in \\(\mathcal{P}_m(F)\\) such
+that \\(p_k(2) = 0\\) for each \\(k \in \\{0,\dots,m\\}\\). Prove that
+\\(p_0,p_1,\dots,p_m\\) is not linearly independent in \\(\mathcal{P}_m(F)\\).
+
+**Solution:**
+
+If \\(p_k = 0\\) for some k, \\(p_k(z) = 0\\) \\(\forall z \in F\\).
+Take \\(a_k = 1\\) and \\(a_j = 0\\) for \\(j \neq k\\). We have:
+\\[
+a_0p_0 + a_1p_1 + \dots + a_mp_m = 0p_0 + \dots + p_{k} + \dots + 0p_m = 0
+\\]
+So the list \\(p_0,\dots,p_m\\) is not linearly independent.
+
+From now on, assume \\(p_k \neq 0\\) for all \\(k \in \\{0,\dots,m\\}\\).
+
+Because \\(p_k(2) = 0\\) for all \\(k \in \\{0,\dots,m\\}\\), \\(z = 2\\) is
+a root of \\(p_k\\), and there exists \\(q_k\\) such that:
+\\[
+p_k(z) = (z - 2)q_k(z)
+\\]
+
+So \\(m \ge \text{deg } p_k \ge 1\\), and
+\\(\text{deg } q_k = \text{deg } p_k - 1 \le m - 1 \implies
+q_k \in \mathcal{P}_{m-1}(F)\\).
+
+Let \\(1,z,\dots,z^{m-1}\\) be a list of \\(m\\) polynomials in
+\\(\mathcal{P} _{m-1}(F)\\). For all \\(q \in \mathcal{P} _{m-1}(F)\\), there
+exists \\(b_0,\dots,b _{m-1} \in F\\) such that
+
+\\[
+q(z) = b_0 + \dots + b_{m-1}z^{m-1}
+\\]
+
+Therefore \\(q \in \text{span}(1,z,\dots,z^{m-1})\\), so
+\\(1,z,\dots,z^{m-1}\\) spans \\(\mathcal{P}_{m-1}(F)\\).
+
+Because [length of a linearly independent list is at most the length
+of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list),
+the list of \\(m + 1\\) polynomials \\(q_0,\dots,q_m\\) is linearly dependent,
+that is, there exist \\(a_0,a_1,\dots,a_m \in F\\), not all zero, such that:
+
+\\[
+\begin{aligned}
+0 &= a_0q_0 + a_1q_1 + \dots + a_mq_m\\\\
+\implies
+0 &= (z - 2)(a_0q_0 + a_1q_1 + \dots + a_mq_m) \\\\
+&= a_0(z-2)q_0 + a_1(z-2)q_1 + \dots + a_m(z-2)q_m \\\\
+&= a_0p_0 + \dots + a_mp_m
+\end{aligned}
+\\]
+
+So \\(p_0,p_1,\dots,p_m\\) is not linearly independent
+\\(\blacksquare\\).
