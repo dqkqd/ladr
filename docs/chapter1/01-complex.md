@@ -141,7 +141,8 @@ The definition of negation (additive inverse) can be represented like this:
 \forall a \in \mathbb{C}, \exists b \in \mathbb{C}: a + b = 0
 \\]
 
-Such \\( b \\) is called a negation of \\( a \\). Suppose \\( a = x + yi \\), then:
+Such \\( b \\) is called a negation of \\( a \\). Suppose \\( a = x + yi \\),
+then:
 
 \\[
 \begin{aligned}
@@ -169,7 +170,8 @@ The definition of inverse (multiplicative inverse) can be represented like this:
 \forall a \in \mathbb{C}, a \neq 0, \exists b \in \mathbb{C}: ab = 1
 \\]
 
-Such \\( b \\) is called an inverse of \\( a \\). Suppose \\( a = x + yi \\), then:
+Such \\( b \\) is called an inverse of \\( a \\). Suppose \\( a = x + yi \\),
+then:
 
 \\[
 \begin{aligned}
@@ -195,12 +197,14 @@ println!("({}) * ({}) = {}", c, c.inv(), c * c.inv());
 
 ## Subtraction and Division
 
-Having the negation and inversion, subtraction and division can be easily defined:
+Having the negation and inversion, subtraction and division can be easily
+defined:
 
 \\[
 \begin{aligned}
 \text{Subtraction}:&\quad \beta - \alpha = \beta + (-\alpha) \\\\
-\text{Division}:&\quad \frac{\beta}{\alpha} = \beta \left( \frac{1}{\alpha} \right)
+\text{Division}:&\quad \frac{\beta}{\alpha} =
+\beta \left( \frac{1}{\alpha} \right)
 \end{aligned}
 \\]
 

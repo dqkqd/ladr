@@ -33,8 +33,8 @@ v &= u_1 + \dots + u_m \\\\
 
 Because there is only one way to represent 0 and \\(v_k - u_k \in V_k\\),
 we have \\( v_1 - u_1 = \dots = v_m - u_m = 0 \\), therefore
-\\(v_1 = u_1, \dots, v_m = u_m\\). This means there is only one representation of
-v, and \\(V_1 + \dots + V_m\\) is a direct sum.
+\\(v_1 = u_1, \dots, v_m = u_m\\). This means there is only one representation
+of v, and \\(V_1 + \dots + V_m\\) is a direct sum.
 
 ## Direct sum of two subspaces
 
@@ -48,6 +48,8 @@ Without loss of generality, we can assume \\((-v) \in U\\).
 Because \\(v \in W\\) and \\(0 = v + (-v)\\), we have \\(v = (-v) = 0\\).
 
 Suppose \\(U \cap W = \\{ 0 \\}\\). \\(\forall v \neq 0\\) and \\(v \in U\\),
-because U is a vector space, we have \\((-v) \in U\\), and thus \\((-v) \notin W\\).
-Therefore the only one way to represent \\(0 = u + w\\) with \\(u \in U, w \in W\\)
+because U is a vector space, we have \\((-v) \in U\\), and thus \\((-v) \notin
+W\\).
+Therefore the only one way to represent \\(0 = u + w\\) with \\(u \in U, w \in
+W\\)
 is \\(u = w = 0\\), which means \\(U + W\\) is a direct sum.

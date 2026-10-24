@@ -69,7 +69,8 @@ println!("{} + {} = {}", list, -list, list + (-list));
 
 ## Multiplication
 
-Multiply a list with a scalar is defined by multiplying each element with the scalar.
+Multiply a list with a scalar is defined by multiplying each element with the
+scalar.
 
 \\[
 \lambda (x_1,x_2,\dots,x_n) = (\lambda x_1, \lambda x_2, \lambda x_n)\quad

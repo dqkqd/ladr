@@ -1,6 +1,7 @@
 # Vector space
 
-Given a vector space V and field F, we define _addition_ and _multiplication_ operations:
+Given a vector space V and field F, we define _addition_ and _multiplication_
+operations:
 
 - \\( \forall u,v \in V: \quad u + v \in V \\)
 - \\( \forall v \in V, \forall \lambda \in F: \quad \lambda v \in V \\)
@@ -81,9 +82,8 @@ Proof: \\(
 - Associativity:
   \\[
   \begin{aligned}
-  (f + g)(x) + h(x)
-  = (f(x) + g(x)) + h(x) = f(x) + (g(x) + h(x))
-  = f(x) + (g + h)(x)
+  (f + g)(x) + h(x) = (f(x) + g(x)) + h(x) =
+  f(x) + (g(x) + h(x)) = f(x) + (g + h)(x)
   \end{aligned}
   \\]
 
@@ -134,7 +134,8 @@ Given \\( v \in V \\),
 suppose there are two additive inverse \\( w \\) and \\( w^{\prime} \\), then:
 
 \\[
-w = w + 0 = w + (v + w^{\prime}) = (w + v) + w^{\prime} = 0 + w^{\prime} = w^{\prime}
+w = w + 0 = w + (v + w^{\prime}) = (w + v) + w^{\prime} =
+0 + w^{\prime} = w^{\prime}
 \\]
 
 ## \\(0v = 0, \quad \forall v \in V\\)

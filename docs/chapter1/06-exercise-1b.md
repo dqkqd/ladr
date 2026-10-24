@@ -15,13 +15,15 @@ Show that
 
 ## Exercise 2
 
-Suppose \\( a \in F, v \in V \\) and \\(av=0\\). Prove that \\(a=0\\) or \\(v=0\\).
+Suppose \\( a \in F, v \in V \\) and \\(av=0\\). Prove that \\(a=0\\) or
+\\(v=0\\).
 
 **Solution**:
 
 If \\(a=0\\), then we have \\(av=0\\).
 
-Suppose \\(a \ne 0\\), since \\(a \in F\\), there exists \\(b\\) such that \\(ba=1\\):
+Suppose \\(a \ne 0\\), since \\(a \in F\\), there exists \\(b\\) such that
+\\(ba=1\\):
 
 \\[
 \begin{aligned}
@@ -58,7 +60,8 @@ It means \\(x = \frac{1}{3}(w - v)\\) satisfies \\(v + 3x = w \\), and unique.
 ## Exercise 4
 
 The empty set is not a vector space. The empty set fails to satisfy only one
-of the requirements listed in the [definition of a vector space](./05-vectorspace.md).
+of the requirements listed in the
+[definition of a vector space](./05-vectorspace.md).
 Which one?
 
 **Solution**:
@@ -216,8 +219,8 @@ We prove \\(V_C\\) is a vector space over \\(C\\).
   \\(\forall u_1, v_1, u_2, v_2, u_3, v_3 \in V\\):
   \\[
   \begin{aligned}
-  (u + v) + w &= ((u_1 + u_2) + i(v_1 + v_2)) + (u_3 + iv_3)
-  = ((u_1 + u_2) + u_3) + i((v_1 + v_2) v_3) \\\\
+  (u + v) + w &= ((u_1 + u_2) + i(v_1 + v_2)) + (u_3 + iv_3) = ((u_1 + u_2) +
+  u_3) + i((v_1 + v_2) v_3) \\\\
   \end{aligned}
   \\]
 
@@ -241,8 +244,7 @@ We prove \\(V_C\\) is a vector space over \\(C\\).
   We have \\(\forall v \in V_C\\), \\(v = u_1 + iv_1\\), \\(u_1, v_1 \in V\\):
   \\[
   \begin{aligned}
-  v + u = (u_1 + iv_1) + (0 + i0)
-  = (u_1 + 0) + i(v_1 + 0) = u_1 + iv_1 = v
+  v + u = (u_1 + iv_1) + (0 + i0) = (u_1 + 0) + i(v_1 + 0) = u_1 + iv_1 = v
   \end{aligned}
   \\]
 

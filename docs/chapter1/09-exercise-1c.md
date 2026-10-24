@@ -28,7 +28,8 @@ determine whether it is a subspace of \\(F^3\\).
    We have \\((0,2,0) \in S\\), but
    \\(2\times(0,2,0) = (0,4,0) \notin S \\),
    (Because \\(0 + 2 \times 4 + 3 \times 0 = 8 \neq 4 \\)).
-   Therefore \\(2\times(0,2,0) \notin S\\). Which means S is not a subspace of \\(F^3\\).
+   Therefore \\(2\times(0,2,0) \notin S\\). Which means S is not a subspace of
+   \\(F^3\\).
 
 3. \\(S = \\{ (x_1,x_2,x_3) \in F^3: x_1x_2x_3 = 0 \\}\\)
 
@@ -148,7 +149,8 @@ and is not a subspace of \\(C^2\\).
 
    **Solution:**
 
-   Given \\(a^3 = b^3\\), we have \\(a = b\\). This is a subspace of \\(R^3\\) (trivially).
+   Given \\(a^3 = b^3\\), we have \\(a = b\\). This is a subspace of \\(R^3\\)
+   (trivially).
 
 2. Is \\( \\{(a,b,c) \in C^3: a^3 = b^3\\}\\) a subspace of \\(C^3\\).
 
@@ -163,15 +165,17 @@ and is not a subspace of \\(C^2\\).
    \\]
 
    Given \\((1,1,0)\\) and
-   \\((\cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right),1,0)\\)
+   \\((\cos\left(\frac{2\pi}{3}\right) +
+   i\sin\left(\frac{2\pi}{3}\right),1,0)\\)
    are in the set. But their sum
    \\(
-   (1 + \cos\left(\frac{2\pi}{3}\right) + i\sin\left(\frac{2\pi}{3}\right),2,0)
-   = (\cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right),2,0)
+   (1 + \cos\left(\frac{2\pi}{3}\right) +
+   i\sin\left(\frac{2\pi}{3}\right),2,0) = (\cos\left(\frac{\pi}{3}\right) +
+   i\sin\left(\frac{\pi}{3}\right),2,0)
    \\)
    is not because:
-   \\(\left((\cos\left(\frac{\pi}{3}\right) + i\sin\left(\frac{\pi}{3}\right)\right)^3
-   = \cos(\pi) + i\sin(\pi) = -1
+   \\(\left((\cos\left(\frac{\pi}{3}\right) +
+   i\sin\left(\frac{\pi}{3}\right)\right)^3 = \cos(\pi) + i\sin(\pi) = -1
    \neq 2^3
    \\)
 
@@ -287,7 +291,8 @@ Let's \\(\\{V_i\\}\\) be any collection of subspaces of \\(V\\).
 - Because \\(0 \in V_i\\), so \\(0 \in \cap_{i}V_i\\).
 - \\(\forall u, v \in \cap_{i}V_i\\): Each \\(V_i\\) is closed under addition,
   \\(u + v \in V_i, \forall i \implies u + v \in \cap_{i}V_i\\).
-- \\(\forall v \in \cap_{i}V_i\\): Each \\(V_i\\) is closed under scalar multiplication,
+- \\(\forall v \in \cap_{i}V_i\\): Each \\(V_i\\) is closed under scalar
+  multiplication,
   \\(\lambda v \in V_i, \forall i \implies \lambda v \in \cap_{i}V_i\\).
 
 So \\(\cap_{i}V_i\\) is a subspace of \\(V\\).
@@ -335,7 +340,8 @@ based on the two subspaces problem solved in [Exercise 12](#exercise-12),
 we know that \\(V_2 \subseteq V_3\\) or \\(V_3 \subseteq V_2\\).
 Thus the largest subspace will contain the two smaller ones.
 
-Therefore we only need to consider that \\(V_1 \setminus (V_2 \cup V_3) \neq \emptyset\\),
+Therefore we only need to consider that \\(V_1 \setminus (V_2 \cup V_3) \neq
+\emptyset\\),
 which means \\(\exists v_1 \in V_1 \setminus (V_2 \cup V_3)\\).
 Similarly:
 \\[
@@ -435,14 +441,16 @@ are subspaces of V, is
 
 **Solution:**
 \\[
-(V_1 + V_2) + V_3
-= \\{(v_1 + v_2) + v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3 \\}\\\\
-V_1 + (V_2 + V_3)
-= \\{v_1 + (v_2 + v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3 \\}
+(V_1 + V_2) + V_3 = \\{(v_1 + v_2) + v_3: v_1 \in V_1, v_2 \in V_2, v_3 \in V_3
+\\}\\\\
+V_1 + (V_2 + V_3) = \\{v_1 + (v_2 + v_3): v_1 \in V_1, v_2 \in V_2, v_3 \in V_3
+\\}
 \\]
 
-Because \\(V_1,V_2,V_3 \subseteq V\\), if \\(v_1 \in V_1, v_2 \in V_2, v_3 \in V_3\\),
-then \\(v_1,v_2,v_3 \in V\\), therefore \\((v_1 + v_2) + v_3 = v_1 + (v_2 + v_3)\\).
+Because \\(V_1,V_2,V_3 \subseteq V\\), if \\(v_1 \in V_1, v_2 \in V_2, v_3 \in
+V_3\\),
+then \\(v_1,v_2,v_3 \in V\\), therefore \\((v_1 + v_2) + v_3 = v_1 + (v_2 +
+v_3)\\).
 So \\((V_1 + V_2) + V_3 = V_1 + (V_2 + V_3)\\) \\(\blacksquare\\).
 
 ## Exercise 18
@@ -519,7 +527,8 @@ For an example, suppose
 \end{aligned}
 \\]
 
-We can see that \\(V_1 \neq V_2\\) but \\(V_1 + U = V_2 + U = R^2\\) \\(\blacksquare\\)
+We can see that \\(V_1 \neq V_2\\) but \\(V_1 + U = V_2 + U = R^2\\)
+\\(\blacksquare\\)
 
 ## Exercise 20
 
@@ -656,8 +665,7 @@ W_3 = \\{(0,0,x,0,0) \in F^5: x \in F\\}\\\\
 
 We have
 \\(
-U + W_1 + W_2 + W_3
-= \\{(x+a,x+b,x+y+c,x-y+a,2x+a) \in F^5: x,y,a,b,c \in F\\}
+U + W_1 + W_2 + W_3 = \\{(x+a,x+b,x+y+c,x-y+a,2x+a) \in F^5: x,y,a,b,c \in F\\}
 \\)
 This is proved in [Exercise 21](#exercise-21) that the set is \\(F^5\\).
 
@@ -690,7 +698,8 @@ x - y + a = 0 & (4) \\\\
 \end{aligned}
 \\]
 
-The only way to represent 0 in \\(U + W_1 + W_2 + W_3\\) is \\(0 = 0 + 0 + 0 + 0\\).
+The only way to represent 0 in \\(U + W_1 + W_2 + W_3\\) is \\(0 = 0 + 0 + 0 +
+0\\).
 Therefore \\(F^5 = U + W_1 + W_2 + W_3 = U \oplus W_1 \oplus W_2 \oplus W_3\\).
 
 ## Exercise 23
@@ -717,12 +726,10 @@ V_2 &= \\{(x,3x) \in R^2: x \in R\\}
 We have
 \\[
 \begin{aligned}
-&U + V_1
-= \\{(x+y,2y) \in R^2: x,y \in R\\}
-= \\{(z,t) \in R^2: z,t \in R\\} = R^2\\\\
-&U + V_2
-= \\{(x+y,3y) \in R^2: x,y \in R\\}
-= \\{(z,t) \in R^2: z,t \in R\\} = R^2
+&U + V_1 = \\{(x+y,2y) \in R^2: x,y \in R\\} = \\{(z,t) \in R^2: z,t \in R\\} =
+R^2\\\\
+&U + V_2 = \\{(x+y,3y) \in R^2: x,y \in R\\} = \\{(z,t) \in R^2: z,t \in R\\} =
+R^2
 \end{aligned}
 \\]
 
@@ -797,25 +804,19 @@ and odd functions respectively.
 \\[
 \begin{aligned}
 e(-x)
-&= \frac{f(-x) + f(-(-x))}{2}
-= \frac{f(-x) + f(x)}{2}
-= \frac{f(x) + f(-x)}{2}
-= e(x)
+&= \frac{f(-x) + f(-(-x))}{2} = \frac{f(-x) + f(x)}{2} = \frac{f(x) +
+f(-x)}{2} = e(x)
 \\\\
 o(-x)
-&= \frac{f(-x) - f(-(-x))}{2}
-= \frac{f(-x) - f(x)}{2}
-= -\frac{f(x) - f(-x)}{2}
-= -o(x)
+&= \frac{f(-x) - f(-(-x))}{2} = \frac{f(-x) - f(x)}{2} = -\frac{f(x) -
+f(-x)}{2} = -o(x)
 \end{aligned}
 \\]
 
 And:
 \\[
-e(x) + o(x)
-= \frac{f(x) + f(-x)}{2} + \frac{f(x) - f(-x)}{2}
-= \frac{f(x) + f(-x) + f(x) - f(-x)}{2}
-= f(x)
+e(x) + o(x) = \frac{f(x) + f(-x)}{2} + \frac{f(x) - f(-x)}{2} = \frac{f(x) +
+f(-x) + f(x) - f(-x)}{2} = f(x)
 \\]
 
 So:
@@ -834,5 +835,6 @@ For all \\(f \in V_e \cap V_o\\), \\(f\\) is both even and odd:
 \end{aligned}
 \\]
 
-This mean \\(f = 0\\) and \\(V_e \cap V_o = \\{0\\}\\), so \\(R^R = V_e \oplus V_o\\)
+This mean \\(f = 0\\) and \\(V_e \cap V_o = \\{0\\}\\), so \\(R^R = V_e \oplus
+V_o\\)
 \\(\blacksquare\\).

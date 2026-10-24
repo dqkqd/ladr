@@ -2,6 +2,8 @@
   "json": {
   },
   "markdown": {
+    "lineWidth": 80,
+    "textWrap": "maintainAndWrap"
   },
   "excludes": [
     "**/*-lock.json"

@@ -64,7 +64,8 @@ Show that \\(\text{span}(v_1,\dots,v_m)=\text{span}(w_1,\dots,w_m)\\).
 
 **Solution:**
 
-For all \\(w \in \text{span}(w_1,\dots,w_m)\\), there are \\(a_1,\dots,a_m \in F\\):
+For all \\(w \in \text{span}(w_1,\dots,w_m)\\), there are \\(a_1,\dots,a_m \in
+F\\):
 
 \\[
 \begin{aligned}
@@ -102,7 +103,8 @@ v
 
 So \\(\text{span}(v_1,\dots,v_m) \subseteq \text{span}(w_1,\dots,w_m)\\).
 
-Therefore \\(\text{span}(v_1,\dots,v_m)=\text{span}(w_1,\dots,w_m)\\) \\(\blacksquare\\).
+Therefore \\(\text{span}(v_1,\dots,v_m)=\text{span}(w_1,\dots,w_m)\\)
+\\(\blacksquare\\).
 
 ## Exercise 4
 
@@ -130,16 +132,17 @@ Therefore \\(\text{span}(v_1,\dots,v_m)=\text{span}(w_1,\dots,w_m)\\) \\(\blacks
 
    Given \\(v_1,v_2\\) is a list of two vectors.
 
-   Suppose \\(v_1,v_2\\) is a linearly independent list.
-   If there exists \\(\lambda \in F \\) such that:
+   Suppose \\(v_1,v_2\\) is a linearly independent list. If there exists
+   \\(\lambda \in F \\) such that:
    \\[
    v_1 = \lambda v_2
    \\]
-   Then \\(v_1,v_2\\) is linearly dependent because \\(1v_1 - \lambda v_2 = 0\\).
+   Then \\(v_1,v_2\\) is linearly dependent because \\(1v_1 - \lambda v_2 =
+   0\\).
 
-   Suppose \\(v_1,v_2\\) is not a scalar multiple of the other. If the list is linearly
-   dependent, then there exists \\(a_1,a_2 \in F\\), and \\(a_1 \neq 0\\) or
-   \\(a_2 \neq 0\\) such that:
+   Suppose \\(v_1,v_2\\) is not a scalar multiple of the other. If the list is
+   linearly dependent, then there exists \\(a_1,a_2 \in F\\), and \\(a_1 \neq
+   0\\) or \\(a_2 \neq 0\\) such that:
    \\[
    a_1v_1 + a_2v_2 = 0
    \\]
@@ -182,15 +185,16 @@ If \\(c = 8\\) then
 \\]
 So the given is linearly dependent
 
-Suppose the given list is linearly dependent, then exists \\((x,y,z) \neq (0,0,0)\\),
+Suppose the given list is linearly dependent, then exists \\((x,y,z) \neq
+(0,0,0)\\),
 such that
 \\[
 x(2,3,1) + y(1,-1,2) + z(7,3,c) = 0\\\\
 \\]
 
 - If \\(z = 0\\), then \\(x(2,3,1) + y(1,-1,2) = 0\\), there is only one pair
-  \\((x,y) = (0,0)\\) satisfies the equation. This contradicts with the assumption
-  that \\((x,y,z) \neq (0,0,0)\\).
+  \\((x,y) = (0,0)\\) satisfies the equation. This contradicts with the
+  assumption that \\((x,y,z) \neq (0,0,0)\\).
 
 - If \\(z \neq 0\\), we can reduce \\(z\\) by divide both size for \\(z\\).
   \\[
@@ -287,12 +291,13 @@ a_4 - a_3 = 0
 \end{aligned}
 \\]
 
-So \\(v_1 - v_2,v_2 - v_3,v_3 - v_4,v_4\\) is linearly independent \\(\blacksquare\\).
+So \\(v_1 - v_2,v_2 - v_3,v_3 - v_4,v_4\\) is linearly independent
+\\(\blacksquare\\).
 
 ## Exercise 9
 
-Prove or give a counterexample: If \\(v_1,v_2,\dots,v_m\\) is a linearly independent
-list of vectors in \\(V\\), then
+Prove or give a counterexample: If \\(v_1,v_2,\dots,v_m\\) is a linearly
+independent list of vectors in \\(V\\), then
 \\[
 5v_1-4v_2,v_2,v_3,\dots,v_m
 \\]
@@ -325,9 +330,10 @@ So \\(5v_1-4v_2,v_2,v_3,\dots,v_m\\) is linearly independent \\(\blacksquare\\).
 
 ## Exercise 10
 
-Prove or give a counterexample: If \\(v_1,v_2,\dots,v_m\\) is a linearly independent
-list of vectors in \\(V\\) and \\(\lambda \in F\\) with \\(\lambda \neq 0\\),
-then \\(\lambda v_1,\lambda v_2,\dots,\lambda v_m\\) is linearly independent.
+Prove or give a counterexample: If \\(v_1,v_2,\dots,v_m\\) is a linearly
+independent list of vectors in \\(V\\) and \\(\lambda \in F\\) with \\(\lambda
+\neq 0\\), then \\(\lambda v_1,\lambda v_2,\dots,\lambda v_m\\) is linearly
+independent.
 
 **Solution:**
 
@@ -349,7 +355,8 @@ Because \\(\lambda \neq 0\\), we must have:
 a_1 = a_2 = \dots = a_m = 0
 \\]
 
-So \\(\lambda v_1,\lambda v_2,\dots,\lambda v_m\\) is linearly independent \\(\blacksquare\\).
+So \\(\lambda v_1,\lambda v_2,\dots,\lambda v_m\\) is linearly independent
+\\(\blacksquare\\).
 
 ## Exercise 11
 
@@ -363,19 +370,21 @@ We give a counterexample.
 
 Let \\(v_1,\dots,v_m\\) be a linearly independent list in \\(V\\).
 Take \\(w_1,\dots,w_m\\) such that \\(w_i = -v_i\\), from
-[Exercise 10](#exercise-10) \\(w_1,\dots,w_m = -v_1,\dots,-v_m\\) is linearly independent.
+[Exercise 10](#exercise-10) \\(w_1,\dots,w_m = -v_1,\dots,-v_m\\) is linearly
+independent.
 
 However, their sum
 \\[
 v_1+w_1,\dots,v_m+w_m=v_1+(-v_1),\dots,v_m+(-v_m)=0,\dots,0
 \\]
-is linearly dependent because there exist coefficients
-with 1 in the first position and 0 elsewhere
-such that \\(1\times0 + 0\times0 + \dots + 0\times0 = 0\\) \\(\blacksquare\\).
+is linearly dependent because there exist coefficients with 1 in the first
+position and 0 elsewhere such that \\(1\times0 + 0\times0 + \dots + 0\times0 =
+0\\) \\(\blacksquare\\).
 
 ## Exercise 12
 
-Suppose \\(v_1,\dots,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
+Suppose \\(v_1,\dots,v_m\\) is linearly independent in \\(V\\) and \\(w \in
+V\\).
 Prove that if \\(v_1+w,\dots,v_m+w\\) is linearly dependent,
 then \\(w \in \text{span}(v_1,..,v_m)\\).
 
@@ -392,7 +401,8 @@ Because \\(v_1+w,\dots,v_m+w\\) is linearly dependent, there exist
 \end{aligned}
 \\]
 
-Because \\(v_1,\dots,v_m\\) is linearly independent, \\(a_1v_1+\dots+a_mv_m \neq 0\\).
+Because \\(v_1,\dots,v_m\\) is linearly independent, \\(a_1v_1+\dots+a_mv_m \neq
+0\\).
 So \\((a_1+\dots+a_m) \neq 0\\), and we can represent \\(w\\) as:
 \\[
 w = -\frac{a_1}{a_1+\dots+a_m}v_1 - \dots -\frac{a_m}{a_1+\dots+a_m}v_m
@@ -401,7 +411,8 @@ w = -\frac{a_1}{a_1+\dots+a_m}v_1 - \dots -\frac{a_m}{a_1+\dots+a_m}v_m
 
 ## Exercise 13
 
-Suppose \\(v_1,\dots,v_m\\) is linearly independent in \\(V\\) and \\(w \in V\\).
+Suppose \\(v_1,\dots,v_m\\) is linearly independent in \\(V\\) and \\(w \in
+V\\).
 Show that
 
 \\[
@@ -412,7 +423,8 @@ w \notin \text{span}(v_1,\dots,v_m)
 **Solution:**
 
 Suppose \\(v_1,\dots,v_m,w\\) is a linearly independent list.
-If \\(w \in \text{span}(v_1,\dots,v_m)\\), then there exist \\(a_1,\dots,a_m \in F\\):
+If \\(w \in \text{span}(v_1,\dots,v_m)\\), then there exist \\(a_1,\dots,a_m \in
+F\\):
 \\[
 w = a_1v_1+\dots+a_mv_m
 \implies a_1v_1+\dots+a_mv_m + (-1)w = 0
@@ -434,7 +446,8 @@ There are three cases:
 - \\(w = 0\\): This cannot happen
   because \\(0 \in \text{span}(v_1,\dots,v_m)\\) and
   \\(w \notin \text{span}(v_1,\dots,v_m)\\)
-- \\(a_w = 0\\): This implies \\(a_1v_1+\dots+a_mv_m = 0\\). Because \\(v_1,\dots,v_m\\)
+- \\(a_w = 0\\): This implies \\(a_1v_1+\dots+a_mv_m = 0\\). Because
+  \\(v_1,\dots,v_m\\)
   is linearly independent, \\(a_1 = \dots = a_m = 0\\), contradicting the
   assumption that \\(a_1,\dots,a_m,a_w\\) is not all zero
 - \\(w \neq 0\\) and \\(a_w \neq 0\\): we have
@@ -486,7 +499,8 @@ Replace \\(v_i\\) with \\(w_i\\) using
 \end{aligned}
 \\]
 
-Because \\(w_1,\dots,w_m\\) is linearly independent, the coefficients must be zero:
+Because \\(w_1,\dots,w_m\\) is linearly independent, the coefficients must be
+zero:
 \\[
 \begin{aligned}
 &\begin{cases}
@@ -511,7 +525,8 @@ Suppose \\(v_1,\dots,v_m\\) is linearly independent, let
 \end{aligned}
 \\]
 
-Because \\(v_1,\dots,v_m\\) is linearly independent, the coefficients must be zero:
+Because \\(v_1,\dots,v_m\\) is linearly independent, the coefficients must be
+zero:
 \\[
 \begin{aligned}
 &\begin{cases}
@@ -591,26 +606,26 @@ That contradicts [length of a linearly independent list is at most the length
 of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list).
 So \\(V\\) must be infinite-dimensional.
 
-Suppose \\(V\\) is infinite-dimensional. We construct a sequence \\(v_1,v_2,\dots\\)
+Suppose \\(V\\) is infinite-dimensional. We construct a sequence
+\\(v_1,v_2,\dots\\)
 that satisfies the condition.
 
 - Step 1: Because \\(V\\) is infinite-dimensional, there must be
   \\(v_1 \neq 0\\) and \\(v_1 \in V\\). Put \\(v_1\\) into the sequence.
   By [Exercise 4](#exercise-4), the list of one vector \\(v_1\\)
   is linearly independent.
-- Step k: Suppose we have put \\(k-1\\) vectors into the sequence \\(v_1,\dots,v_{k-1}\\),
-  and the list \\(v_1,\dots,v_j\\) is linearly independent for all \\(j \le k-1\\).
-  If \\(V = \text{span}(v_1,\dots,v_{k-1})\\), then \\(V\\) is finite-dimensional,
-  but \\(V\\) is infinite-dimensional, so
-  \\(V \neq \text{span}(v_1,\dots,v_{k-1}) \\), which implies
-  there exists \\(v_k \neq 0\\) and \\(v_k \in V\\), such that
-  \\(v_k \notin \text{span}(v_1,\dots,v_{k-1})\\).
+- Step k: Suppose we have put \\(k-1\\) vectors into the sequence
+  \\(v_1,\dots,v_{k-1}\\), and the list \\(v_1,\dots,v_j\\) is linearly
+  independent for all \\(j \le k-1\\). If \\(V =
+  \text{span}(v_1,\dots,v_{k-1})\\), then \\(V\\) is finite-dimensional, but
+  \\(V\\) is infinite-dimensional, so \\(V \neq \text{span}(v_1,\dots,v_{k-1})
+  \\), which implies there exists \\(v_k \neq 0\\) and \\(v_k \in V\\), such
+  that \\(v_k \notin \text{span}(v_1,\dots,v_{k-1})\\).
 
   By [Exercise 13](#exercise-13), \\(v_1,\dots,v_k\\) is linearly independent.
 
-For any constructed sequence, we can always find a new vector \\(u \in V\\)
-that isn't in the span of the previously constructed sequence
-and append it, which yields in a sequence
-\\(v_1,v_2,\dots\\) such that \\(v_1,\dots,v_m\\) is linearly independent for
-every positive integer \\(m\\)
+For any constructed sequence, we can always find a new vector \\(u \in V\\) that
+isn't in the span of the previously constructed sequence and append it, which
+yields in a sequence \\(v_1,v_2,\dots\\) such that \\(v_1,\dots,v_m\\) is
+linearly independent for every positive integer \\(m\\)
 \\(\blacksquare\\).

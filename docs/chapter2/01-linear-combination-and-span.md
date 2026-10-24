@@ -53,16 +53,16 @@ The span is a subspace of \\(V\\) because:
 - The sum of two elements in the span is also in the span:
 
   \\[
-  (a_1v_1 + \dots + a_mv_m) + (a^{\prime}_1v_1 + \dots + a^{\prime}_mv_m)
-  = (a_1+a^{\prime}_1)v_1 + \dots + (a_m+a^{\prime}_m)v_m
+  (a_1v_1 + \dots + a_mv_m) + (a^{\prime}_1v_1 + \dots + a^{\prime}_mv_m) =
+  (a_1+a^{\prime}_1)v_1 + \dots + (a_m+a^{\prime}_m)v_m
   \in \text{span}(v_1,\dots,v_m)
   \\]
 
 - The scalar multiplication is also in the span:
 
   \\[
-  \lambda (a_1v_1 + \dots + a_mv_m)
-  = (\lambda a_1)v_1 + \dots + (\lambda a_m)v_m
+  \lambda (a_1v_1 + \dots + a_mv_m) = (\lambda a_1)v_1 + \dots + (\lambda
+  a_m)v_m
   \in \text{span}(v_1,\dots,v_m)
   \\]
 
@@ -100,7 +100,8 @@ in \\(F\\).
   \\[
   \begin{aligned}
   p_a(z) + p_b(z)
-  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (b_0 + b_1z + b_2z^2 + \dots + b_mz^m) \\\\
+  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (b_0 + b_1z + b_2z^2 + \dots +
+  b_mz^m) \\\\
   &= (a_0 + b_0) + (a_1 + b_1)z + (a_2 + b_2)z^2 + \dots + (a_m+b_m)z^m
   \end{aligned}
   \\]
@@ -109,9 +110,8 @@ in \\(F\\).
   \\(\forall a_i, \lambda \in F\\), we have \\(\lambda a_i \in F\\), and
   \\[
   \begin{aligned}
-  \lambda p(z)
-  = \lambda (a_0 + a_1z + a_2z^2 + \dots + a_mz^m)
-  = (\lambda a_0) + (\lambda a_1)z + (\lambda a_2)z^2 + \dots + (\lambda a_m)z^m
+  \lambda p(z) = \lambda (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) = (\lambda
+  a_0) + (\lambda a_1)z + (\lambda a_2)z^2 + \dots + (\lambda a_m)z^m
   \end{aligned}
   \\]
 
@@ -120,7 +120,8 @@ in \\(F\\).
   \\[
   \begin{aligned}
   p_a(z) + p_b(z)
-  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (b_0 + b_1z + b_2z^2 + \dots + b_mz^m) \\\\
+  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (b_0 + b_1z + b_2z^2 + \dots +
+  b_mz^m) \\\\
   &= (a_0 + b_0) + (a_1 + b_1)z + (a_2 + b_2)z^2 + \dots + (a_m+b_m)z^m \\\\
   &= (b_0 + a_0) + (b_1 + a_1)z + (b_2 + a_2)z^2 + \dots + (b_m+a_m)z^m \\\\
   &= p_b(z) + p_a(z)
@@ -144,12 +145,14 @@ in \\(F\\).
   \end{aligned}
   \\]
 
-- Additive identity: Let's call \\(p_0(z) = 0 + 0z + 0z^2 + \dots + 0z^m = 0\\), then
+- Additive identity: Let's call \\(p_0(z) = 0 + 0z + 0z^2 + \dots + 0z^m = 0\\),
+  then
   \\(\forall a_i \in F\\), we have \\(a_i + 0 = a_i\\), and
   \\[
   \begin{aligned}
   p_a(z) + p_0(z)
-  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (0 + 0z + 0z^2 + \dots + 0z^m) \\\\
+  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (0 + 0z + 0z^2 + \dots + 0z^m)
+  \\\\
   &= (a_0 + 0) + (a_1 + 0)z + (a_2 + 0)z^2 + \dots + (a_m+0)z^m \\\\
   &= a_0 + a_1z + a_2z^2 + \dots + a_mz^m \\\\
   &= p_a(z)
@@ -160,7 +163,8 @@ in \\(F\\).
   \\[
   \begin{aligned}
   p_a(z) + (-p_a(z))
-  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (-(a_0 + a_1z + a_2z^2 + \dots + a_mz^m)) \\\\
+  &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) + (-(a_0 + a_1z + a_2z^2 + \dots +
+  a_mz^m)) \\\\
   &= (a_0 + a_1z + a_2z^2 + \dots + a_mz^m) +
   ((-a_0) + (-a_1)z + (-a_2)z^2 + \dots + (-a_m)z^m) \\\\
   &= (a_0 - a_0) + (a_1 - a_1)z + (a_2 - a_2)z^2 + \dots + (a_m-a_m)z^m \\\\
@@ -169,7 +173,8 @@ in \\(F\\).
   \end{aligned}
   \\]
 
-- Multiplicative identity: \\(\forall a_i \in F\\), we have \\(1a_i = a_i\\), and
+- Multiplicative identity: \\(\forall a_i \in F\\), we have \\(1a_i = a_i\\),
+  and
   \\[
   \begin{aligned}
   1p_a(z)
@@ -190,11 +195,14 @@ in \\(F\\).
   \lambda (p_a(z) + p_b(z))
   &= \lambda ((a_0 + a_1z + a_2z^2 + \dots + a_mz^m) +
   (b_0 + b_1z + b_2z^2 + \dots + b_mz^m)) \\\\
-  &= \lambda ((a_0 + b_0) + (a_1 + b_1)z + (a_2 + b_2)z^2 + \dots + (a_m+b_m)z^m) \\\\
+  &= \lambda ((a_0 + b_0) + (a_1 + b_1)z + (a_2 + b_2)z^2 + \dots +
+  (a_m+b_m)z^m) \\\\
   &= \lambda (a_0 + b_0) + \lambda (a_1 + b_1)z +
   \lambda (a_2 + b_2)z^2 + \dots + \lambda (a_m+b_m)z^m \\\\
-  &= ((\lambda a_0) + (\lambda a_1)z + (\lambda a_2)z^2 + \dots + (\lambda a_m)z^m) +
-  ((\lambda b_0) + (\lambda b_1)z + (\lambda b_2)z^2 + \dots + (\lambda b_m)z^m) \\\\
+  &= ((\lambda a_0) + (\lambda a_1)z + (\lambda a_2)z^2 + \dots + (\lambda
+  a_m)z^m) +
+  ((\lambda b_0) + (\lambda b_1)z + (\lambda b_2)z^2 + \dots + (\lambda b_m)z^m)
+  \\\\
   &= \lambda p_a(z) + \lambda p_b(z)
   \end{aligned}
   \\]

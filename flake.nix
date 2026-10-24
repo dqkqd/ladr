@@ -35,6 +35,7 @@
             packages = [
               mdbook
               dprint
+              markdownlint-cli2
               typos
             ];
           };

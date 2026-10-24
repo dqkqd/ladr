@@ -18,4 +18,7 @@ format-check:
 typos:
   typos
 
-check: format-check typos test
+markdownlint:
+  markdownlint-cli2
+
+check: format-check typos markdownlint test

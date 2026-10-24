@@ -33,8 +33,8 @@ A subset U of V is a subspace iff:
 
    - \\((0,0,0,0) \in X\\) with \\(x_1 = x_2 = x_4 = 0\\).
    - \\((x_1,x_2,5x_4,x_4) +
-     (x_1^{\prime},x_2^{\prime},5x_4^{\prime},x_4^{\prime})
-     = (x_1 + x_1^{\prime},x_2 + x_2^{\prime},
+     (x_1^{\prime},x_2^{\prime},5x_4^{\prime},x_4^{\prime}) = (x_1 +
+     x_1^{\prime},x_2 + x_2^{\prime},
      5(x_4 + x_4^{\prime}),x_4 + x_4^{\prime}) \in X
      \\)
    - \\(\lambda (x_1,x_2,5x_4,x_4)
@@ -69,15 +69,15 @@ A subset U of V is a subspace iff:
 
    - If \\(b = 0\\), then \\(f^{\prime}(2) = 0\\).
      - \\(0\\) exists: Take a function
-       \\(0: (0,3) \rightarrow R\\) such that \\(0(x) = 0\\), \\(\forall x \in (0,3)\\).
+       \\(0: (0,3) \rightarrow R\\) such that \\(0(x) = 0\\), \\(\forall x \in
+       (0,3)\\).
        This function satisfies \\(f^{\prime}(2) = 0\\), because
        \\(0^{\prime}(x) = 0\\), \\(\forall x \in (0, 3)\\)
 
      - The sum of two differentiable function is a differentiable
        function. For \\(g, h\\) in the set, we have
        \\[
-       (g + h)^{\prime}(2) = g^{\prime}(2) + h^{\prime}(2)
-       = 0 + 0 = 0
+       (g + h)^{\prime}(2) = g^{\prime}(2) + h^{\prime}(2) = 0 + 0 = 0
        \\]
        Which means \\(g + h\\) in the set.
      - The product of two differentiable function is a differentiable
@@ -96,7 +96,8 @@ A subset U of V is a subspace iff:
 
 ## Sum of subspaces
 
-Suppose \\(V_1, \dots, V_m\\) are subspaces of \\(V\\). The sum of \\(V_1, \dots, V_m\\),
+Suppose \\(V_1, \dots, V_m\\) are subspaces of \\(V\\). The sum of \\(V_1,
+\dots, V_m\\),
 denoted by \\(V_1 + \dots + V_m\\) is the set of all possible sums of
 elements \\(V_1, \dots, V_m\\).
 
@@ -109,11 +110,11 @@ V_1 + \dots + V_m = \\{ v_1 + \dots + v_m : v_1 \in V_1, \dots, v_m \in V_m \\}
 First we prove \\(V_1 + \dots + V_m\\) is a subspace.
 
 - Because each \\(V_i\\) is a subspace of \\(V\\), each of them contains
-  \\(0\\) element. This means \\(0 = 0_1 + \dots + 0_m\\) in \\(V_1 + \dots + V_m\\).
+  \\(0\\) element. This means \\(0 = 0_1 + \dots + 0_m\\) in \\(V_1 + \dots +
+  V_m\\).
 - \\(\forall v_i, u_i \in V_i\\), we have \\(v_i + u_i \in V_i\\), and
   \\[
-  (v_1 + \dots + v_m) + (u_1 + \dots + u_m)
-  = (v_1 + u_1) + \dots + (v_m + u_m)
+  (v_1 + \dots + v_m) + (u_1 + \dots + u_m) = (v_1 + u_1) + \dots + (v_m + u_m)
   \\]
   This means the sum of two elements in \\(V_1 + \dots + V_m\\)
   also in \\(V_1 + \dots + V_m\\).
@@ -121,8 +122,7 @@ First we prove \\(V_1 + \dots + V_m\\) is a subspace.
 - \\(\forall v_i, u_i \in V_i\\), and \\(\lambda \in F\\)
   we have \\(\lambda v_i \in V_i\\), and
   \\[
-  \lambda (v_1 + \dots + v_m)
-  = (\lambda v_1) + \dots + (\lambda v_m)
+  \lambda (v_1 + \dots + v_m) = (\lambda v_1) + \dots + (\lambda v_m)
   \\]
   This means the product of two elements in \\(V_1 + \dots + V_m\\)
   also in \\(V_1 + \dots + V_m\\).

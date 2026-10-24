@@ -28,9 +28,9 @@ The empty list \\(()\\) is also declared to be linearly independent.
 
    **Proof:**
 
-   Assume \\(v_1,\dots,v_m\\) is a linearly independent list.
-   Suppose one of the subset of \\(v_1,\dots,v_m\\) is not a linearly independent
-   list. Without loss of generality, we can assume it is \\(v_1,\dots,v_k\\).
+   Assume \\(v_1,\dots,v_m\\) is a linearly independent list. Suppose one of the
+   subset of \\(v_1,\dots,v_m\\) is not a linearly independent list. Without
+   loss of generality, we can assume it is \\(v_1,\dots,v_k\\).
 
    Then there exists \\(a_1,\dots,a_k\\), with at least one \\(a_j \neq 0\\),
    \\(1 \le j \le k\\), such that
@@ -41,13 +41,14 @@ The empty list \\(()\\) is also declared to be linearly independent.
    If can take \\((a_{k+1}, \dots, a_m) = (0,\dots,0)\\):
 
    \\[
-   a_1v_1 + \dots + a_mv_m = (a_1m_1 + \dots + a_kv_k) + (0v_{k+1} + \dots + 0v_m)
-   = 0 + 0 = 0
+   a_1v_1 + \dots + a_mv_m = (a_1m_1 + \dots + a_kv_k) + (0v_{k+1} + \dots +
+   0v_m) = 0 + 0 = 0
    \\]
 
    Which means \\(v_1,\dots,v_m\\) is not a linearly independent list because
    there is at least one \\(a_j \neq 0\\).
-   So every subset of \\(v_1,\dots,v_m\\) is a linearly independent list \\(\blacksquare\\).
+   So every subset of \\(v_1,\dots,v_m\\) is a linearly independent list
+   \\(\blacksquare\\).
 
 ## Linear dependence lemma
 
@@ -95,10 +96,12 @@ If \\(k\\) satisfies the condition above, we prove that
 If \\(u \in \text{span}(v_1,\dots,v_{k-1},v_{k+1},\dots,v_m)\\), then
 it is obvious that \\(u \in \text{span}(v_1,\dots,v_m)\\), so:
 \\[
-\text{span}(v_1,\dots,v_{k-1},v_{k+1},\dots,v_m) \subseteq \text{span}(v_1,\dots, v_m)
+\text{span}(v_1,\dots,v_{k-1},v_{k+1},\dots,v_m) \subseteq
+\text{span}(v_1,\dots, v_m)
 \\]
 
-If \\(u \in \text{span}(v_1,\dots, v_m)\\), there exists \\(c_1,\dots, c_m \in F\\):
+If \\(u \in \text{span}(v_1,\dots, v_m)\\), there exists \\(c_1,\dots, c_m \in
+F\\):
 \\[
 u = c_1v_1 + \dots + c_mv_m
 \\]
@@ -109,7 +112,8 @@ If \\(k > 1\\), then we can replace \\(v_k\\) by some linear combination from
 span that with \\(k^{th}\\) term removed.
 So
 \\[
-\text{span}(v_1,\dots, v_m) \subseteq \text{span}(v_1,\dots,v_{k-1},v_{k+1},\dots,v_m)
+\text{span}(v_1,\dots, v_m) \subseteq
+\text{span}(v_1,\dots,v_{k-1},v_{k+1},\dots,v_m)
 \\]
 
 \\(\blacksquare\\).
@@ -153,10 +157,11 @@ There are two cases:
 
 - All the vectors \\(w_i\\) has been removed, which means \\(k = n\\), and the
   spanning list is \\(v_1,\dots,v_k\\). If \\(k < m\\), then
-  \\(v_{k+1} \in \text{span}(v_1,\dots,v_k)\\), which contradicts with \\(v_1,\dots,v_m\\)
+  \\(v_{k+1} \in \text{span}(v_1,\dots,v_k)\\), which contradicts with
+  \\(v_1,\dots,v_m\\)
   is linearly independent. Therefore \\(k = m = n\\).
-- Some of the vectors \\(w_i\\) have not been removed (\\(k < n\\)). We can construct
-  a new spanning list by adding \\(v_{k+1}\\) after \\(v_k\\):
+- Some of the vectors \\(w_i\\) have not been removed (\\(k < n\\)). We can
+  construct a new spanning list by adding \\(v_{k+1}\\) after \\(v_k\\):
 
   \\[
   v_1,\dots,v_k,v_{k+1},\underbrace{w_i,\dots, w_j}_{n-k \text{ vectors}}
@@ -164,12 +169,14 @@ There are two cases:
 
   The list is linearly dependent so one of the vectors must be a combination
   of previous vectors. It cannot be a vector in \\(v_1,\dots,v_{k+1}\\) because
-  \\(v_1,\dots,v_m\\) is linearly independent, so it must be one of \\(w_i,\dots,w_j\\).
+  \\(v_1,\dots,v_m\\) is linearly independent, so it must be one of
+  \\(w_i,\dots,w_j\\).
   Remove that vector and we have a new spanning list of \\(n\\) vectors.
 
-Keep adding vectors to the spanning list, because the space is finite dimensional,
-it must stop after the numbers of steps. Based on the two cases above we must have
-\\(m \le n\\) \\(\blacksquare\\).
+Keep adding vectors to the spanning list, because the space is finite
+dimensional, it must stop after the numbers of steps. Based on the two cases
+above we must have \\(m \le n\\)
+\\(\blacksquare\\).
 
 ## Finite-dimensional subspaces
 
@@ -177,7 +184,8 @@ Every subspace of a finite-dimensional vector space is finite-dimensional.
 
 **Proof:**
 
-Suppose \\(V\\) is a finite-dimensional vector space spanned by \\(v_1,\dots,v_m\\)
+Suppose \\(V\\) is a finite-dimensional vector space spanned by
+\\(v_1,\dots,v_m\\)
 and \\(U\\) is a subspace of \\(V\\).
 We construct a spanning list of \\(U\\).
 If \\(U = \\{0\\}\\), then \\(U = \text{span}()\\), otherwise take a vector
