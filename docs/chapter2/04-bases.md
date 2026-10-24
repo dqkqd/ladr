@@ -118,3 +118,73 @@ this must stop after at most \\(n - m\\) steps.
 The final list is linearly independent and spans \\(V\\), so it is a basis of
 \\(V\\)
 \\(\blacksquare\\).
+
+## Every subspace of \\(V\\) is part of a direct sum equal to \\(V\\)
+
+Suppose \\(V\\) is finite-dimensional and \\(U\\) is a subspace of \\(V\\). Then
+there is a subspace \\(W\\) of \\(V\\) such that \\(V = U \oplus W\\).
+
+**Proof:**
+
+If \\(U = \\{0\\}\\), take \\(W = V\\), then \\(V = \\{0\\} \oplus V = U
+\oplus W\\).
+
+If \\(U \neq \\{0\\}\\), let \\(v_1,\dots,v_m\\) be a basis of \\(V\\) and let
+\\(u_1,\dots,u_n\\) be a basis of \\(U\\).
+
+By
+[length of a linearly independent list is at most length of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list):
+
+- every linearly independent list in \\(V\\) must have length at most \\(m\\)
+- every spanning list of \\(V\\) must have length at least \\(m\\)
+
+Consider the list \\(u_1,\dots,u_n,v_1,\dots,v_m\\) that spans \\(V\\).
+Its length is \\(n + m > m\\), so it is linearly dependent. By the
+[linear dependence lemma](./02-linear-independence.md#linear-dependence-lemma),
+there is one vector from the list that is a combination of its previous vectors.
+Since \\(u_1,\dots,u_n\\) is linearly independent, it must be one of
+\\(v_1,\dots,v_m\\). Remove it and the remaining list still spans \\(V\\).
+
+Repeat while the list is not linearly independent. The final list must be
+linearly independent, so its length must be at most \\(m\\); it also spans
+\\(V\\), so its length must be at least \\(m\\). Therefore it must have length
+\\(m\\) and the process stops after \\(n\\) steps.
+
+Because we cannot remove any of \\(u_1,\dots,u_n\\), the final linearly
+independent list must be:
+\\[
+u_1,\dots,u_n,w_1,\dots,w_k
+\\]
+where \\(w_1,\dots,w_k\\) are \\(k\\) of the vectors \\(v_1,\dots,v_m\\).
+
+Let \\(W = \text{span}(w_1,\dots,w_k)\\). \\(V = U + W\\) because
+\\(u_1,\dots,u_n,w_1,\dots,w_k\\) spans \\(V\\).
+
+Suppose \\(v \in U \cap W\\), and let \\(a_1,\dots,a_n \in F\\) and
+\\(b_1,\dots,b_k \in F\\) such that:
+
+\\[
+\begin{aligned}
+&v = a_1u_1 + \dots + a_nu_n = b_1w_1 + \dots + b_kw_k \\\\
+\implies &a_1u_1 + \dots + a_nu_n - b_1w_1 - \dots - b_kw_k = 0
+\end{aligned}
+\\]
+
+Because \\(u_1,\dots,u_n,w_1,\dots,w_k\\) is linearly independent:
+
+\\[a_1 =
+\dots = a_n = b_1 = \dots = b_k = 0
+\\]
+
+Hence:
+\\[
+v = a_1u_1 + \dots + a_nu_n = 0u_1 + \dots + 0u_n = 0
+\\]
+
+Therefore \\(U \cap W = \\{0\\}\\), by [direct sum of two
+subspaces](../chapter1/08-directsum.md#direct-sum-of-two-subspaces), \\(U + W =
+U
+\oplus W\\).
+
+So \\(V = U + W = U \oplus W\\)
+\\(\blacksquare\\).
