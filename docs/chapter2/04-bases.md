@@ -49,3 +49,34 @@ We have:
 
 Therefore the list is a basis
 \\(\blacksquare\\).
+
+## Every spanning list contains a basis
+
+Every spanning list in a vector space can be reduced to a basis of the vector
+space.
+
+**Proof:**
+
+Let \\(v_1,\dots,v_m\\) be a spanning list of a vector space \\(V\\).
+
+We define a removal step for a spanning list \\(v_1,\dots,v_k\\) of \\(V\\):
+
+- If the list is empty \\(k = 0\\), then \\(V = \text{span}() = \\{0\\}\\).
+  The empty list is a basis of \\(V\\).
+
+- If \\(k \ge 1\\), there are two cases:
+
+  - \\(v_1,\dots,v_k\\) is linearly independent, then it is a basis because it
+    spans \\(V\\)
+  - \\(v_1,\dots,v_k\\) is linearly dependent. By
+    [the linear dependence lemma](./02-linear-independence.md#linear-dependence-lemma),
+    we can remove one of its vectors \\(v\\) and the new list with \\(k - 1\\)
+    vectors still spans \\(V\\).
+
+At each step we either get a basis, or a new spanning list with one of its
+vectors removed.
+
+Repeat while the list is linearly dependent. Because the original
+list contains \\(m\\) vectors, this must stop after at most \\(m\\) steps.
+The final list is a basis of \\(V\\).
+\\(\blacksquare\\).
