@@ -629,3 +629,35 @@ isn't in the span of the previously constructed sequence and append it, which
 yields in a sequence \\(v_1,v_2,\dots\\) such that \\(v_1,\dots,v_m\\) is
 linearly independent for every positive integer \\(m\\)
 \\(\blacksquare\\).
+
+## Exercise 18
+
+Prove that \\(F^\infty\\) is infinite-dimensional.
+
+**Solution:**
+
+Define an infinite sequence of vectors \\(v_1,v_2,\dots\\) in \\(F^\infty\\),
+each \\(v_i\\) has all entries zero except the \\(i\text{-th}\\) entry, which is
+1:
+\\[
+\begin{aligned}
+v_1 &= (1,0,\dots) \\\\
+v_i &= (0,\dots,\underbrace{1}_{i\text{-th position}},0,\dots), \forall i > 1
+\end{aligned}
+\\]
+
+Let \\(m\\) be a positive integer, and let \\(a_1,\dots,a_m \in F\\) be such
+that:
+\\[
+\begin{aligned}
+0 &= a_1v_1 + \dots + a_mv_m \\\\
+&= a_1(1,0,\dots) + \dots +
+a_m(0,\dots,\underbrace{1}_{m\text{-th position}},0,\dots) \\\\
+&= (a_1,\dots,a_m,\dots) \\\\
+\implies &a_1 = \dots = a_m = 0
+\end{aligned}
+\\]
+
+So the list \\(v_1,\dots,v_m\\) is linearly independent. By [Exercise
+17](#exercise-17), \\(F^\infty\\) is infinite-dimensional
+\\(\blacksquare\\).
