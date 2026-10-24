@@ -88,7 +88,8 @@ v_k &= w_k - w_{k-1}
 \end{aligned}
 \\]
 
-So for all \\(v \in \text{span}(v_1,\dots,v_m)\\), there are \\(a_1,\dots,a_m \in F\\):
+So for all \\(v \in \text{span}(v_1,\dots,v_m)\\), there are
+\\(a_1,\dots,a_m \in F\\):
 
 \\[
 \begin{aligned}
@@ -569,4 +570,47 @@ of a spanning list](./02-linear-independence.md#length-of-linearly-independent-l
 every spanning list of \\(\mathcal{P}_4(F)\\) must have length at least 5.
 
 So there is no list of four polynomials that can span \\(\mathcal{P}_4(F)\\)
+\\(\blacksquare\\).
+
+## Exercise 17
+
+Prove that \\(V\\) is infinite-dimensional if and only if there is a sequence
+\\(v_1,v_2,\dots\\) of vectors in \\(V\\) such that \\(v_1,\dots,v_m\\)
+is linearly independent for every positive integer \\(m\\).
+
+**Solution:**
+
+Suppose \\(v_1,v_2,\dots\\) is a sequence such that \\(v_1,\dots,v_m\\)
+is linearly independent for every positive integer \\(m\\).
+
+If \\(V\\) is finite-dimensional, there must be a list of \\(n\\) vectors
+\\(u_1,\dots,u_n\\) that spans \\(V\\).
+However, the first \\(n + 1\\) terms \\(v_1,\dots,v_{n+1}\\) of the sequence
+\\(v_1,v_2,\dots\\) are linearly independent.
+That contradicts [length of a linearly independent list is at most the length
+of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list).
+So \\(V\\) must be infinite-dimensional.
+
+Suppose \\(V\\) is infinite-dimensional. We construct a sequence \\(v_1,v_2,\dots\\)
+that satisfies the condition.
+
+- Step 1: Because \\(V\\) is infinite-dimensional, there must be
+  \\(v_1 \neq 0\\) and \\(v_1 \in V\\). Put \\(v_1\\) into the sequence.
+  By [Exercise 4](#exercise-4), the list of one vector \\(v_1\\)
+  is linearly independent.
+- Step k: Suppose we have put \\(k-1\\) vectors into the sequence \\(v_1,\dots,v_{k-1}\\),
+  and the list \\(v_1,\dots,v_j\\) is linearly independent for all \\(j \le k-1\\).
+  If \\(V = \text{span}(v_1,\dots,v_{k-1})\\), then \\(V\\) is finite-dimensional,
+  but \\(V\\) is infinite-dimensional, so
+  \\(V \neq \text{span}(v_1,\dots,v_{k-1}) \\), which implies
+  there exists \\(v_k \neq 0\\) and \\(v_k \in V\\), such that
+  \\(v_k \notin \text{span}(v_1,\dots,v_{k-1})\\).
+
+  By [Exercise 13](#exercise-13), \\(v_1,\dots,v_k\\) is linearly independent.
+
+For any constructed sequence, we can always find a new vector \\(u \in V\\)
+that isn't in the span of the previously constructed sequence
+and append it, which yields in a sequence
+\\(v_1,v_2,\dots\\) such that \\(v_1,\dots,v_m\\) is linearly independent for
+every positive integer \\(m\\)
 \\(\blacksquare\\).
