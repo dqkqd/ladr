@@ -92,3 +92,29 @@ Since \\(V\\) is finite-dimensional, there exists a spanning list
 basis](#every-spanning-list-contains-a-basis), \\(v_1,\dots,v_n\\) can be
 reduced to a basis of \\(V\\)
 \\(\blacksquare\\).
+
+## Every linearly independent list extends a basis
+
+Every linearly independent list of vectors in a finite-dimensional vector space
+can be extended to a basis of the vector space.
+
+**Proof:**
+
+Let \\(v_1,\dots,v_m\\) and \\(u_1,\dots,u_n\\) be a linearly independent list
+in \\(V\\) and a spanning list of \\(V\\), respectively.
+
+Define a process of adding a new vector to \\(v_1,\dots,v_m\\):
+
+- If \\(V = \text{span}(v_1,\dots,v_m)\\), then it is a basis of \\(V\\).
+- If \\(V \neq \text{span}(v_1,\dots,v_m)\\), we can find \\(w \in V\\) such
+  that \\(w \notin \text{span}(v_1,\dots,v_m)\\), by
+  [Exercise 13](./03-exercise-2a.md#exercise-13), \\(v_1,\dots,v_m,w\\) is still
+  linearly independent.
+
+Keep adding vectors to the list until the list spans \\(V\\).
+Because
+[length of a linearly independent list is at most length of a spanning list](./02-linear-independence.md#length-of-linearly-independent-list-le-length-of-spanning-list),
+this must stop after at most \\(n - m\\) steps.
+The final list is linearly independent and spans \\(V\\), so it is a basis of
+\\(V\\)
+\\(\blacksquare\\).
