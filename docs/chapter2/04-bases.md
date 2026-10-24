@@ -80,3 +80,15 @@ Repeat while the list is linearly dependent. Because the original
 list contains \\(m\\) vectors, this must stop after at most \\(m\\) steps.
 The final list is a basis of \\(V\\).
 \\(\blacksquare\\).
+
+## Basis of finite-dimensional vector space
+
+Every finite-dimensional vector space has a basis.
+
+**Proof:**
+
+Since \\(V\\) is finite-dimensional, there exists a spanning list
+\\(v_1,\dots,v_n\\). Because [every spanning list contains a
+basis](#every-spanning-list-contains-a-basis), \\(v_1,\dots,v_n\\) can be
+reduced to a basis of \\(V\\)
+\\(\blacksquare\\).
