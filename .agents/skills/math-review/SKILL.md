@@ -1,7 +1,9 @@
 ---
 name: math-review
-description: Review a mathematical proof or solution for structure, logic, detail,
-edge cases, and style. Use when asked to check, review, or verify a proof, solution, or exercise answer.
+description: >
+  Review a mathematical proof or solution for structure, logic, detail,
+  edge cases, and style. Use when asked to check, review, or verify a proof,
+  solution, or exercise answer.
 ---
 
 # Reviewing math solutions
