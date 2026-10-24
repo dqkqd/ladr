@@ -15,3 +15,4 @@
   - [Linear Combinations and Span](./chapter2/01-linear-combination-and-span.md)
   - [Linear Independence](./chapter2/02-linear-independence.md)
   - [Exercise 2A](./chapter2/03-exercise-2a.md)
+  - [Bases](./chapter2/04-bases.md)
