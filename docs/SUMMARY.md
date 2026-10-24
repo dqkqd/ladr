@@ -16,3 +16,4 @@
   - [Linear Independence](./chapter2/02-linear-independence.md)
   - [Exercise 2A](./chapter2/03-exercise-2a.md)
   - [Bases](./chapter2/04-bases.md)
+  - [Exercise 2B](./chapter2/05-exercise-2b.md)
